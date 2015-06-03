@@ -13,6 +13,26 @@ include('session.php');
     <script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
   </head>
   <body>
+    <div class="container">
+      <div class="Cabecera">
+        <div class="row" role="rowgroup">
+          <div class="col-sm-12">
+  					<img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="100"><br><br><br>
+  						<div class="hide" id="img_cabecera">
+  							Imagen de la cabecera
+  						</div>
+  				</div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+ 
+
+
+
     <div id="perfil">
     <b id="welcome">Welcome : <i><?php echo $login_session; ?></i></b>
     <b id="logout"><a href="logout.php">Log Out</a></b>
