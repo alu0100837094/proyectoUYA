@@ -19,10 +19,8 @@ $dbname = "alu4635";
 // Estableciendo la conexión con el servidor, pasandole como parametros el servername, el user_id y la password y el nombre de la basedatos
 $connection = new mysqli($servername, $username2, $password2, $dbname);
 
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
-$connection->close();
+
+
 
 
 

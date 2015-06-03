@@ -1,5 +1,5 @@
 <?php
-include('login.php'); // Includes Login Script
+//include('login.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
 header("location: perfil.php");
@@ -33,7 +33,7 @@ header("location: perfil.php");
 								Email incorrecto
 							</div>
 							<label id="label_email" for="email" >Email address:</label>
-							<input id="username" type="email" name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" id="email">
+							<input id="email" type="email" name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" id="email">
 								<div class="hide" id="EmailUser">
 									Correo electronico del usuario
 								</div>
@@ -50,7 +50,8 @@ header("location: perfil.php");
 						</div>
             <!--<input  name="submit" type="submit" value=" Login "> -->
             <button id="login" name="submit" type="submit" role="button" aria-describedby ="iniciarSesion" type="submit" class="btn btn-default">Entrar</button><br><br>
-							<div class="hide" id="iniciarSesion" >
+            <div class="err" id="add_err"></div>
+              <div class="hide" id="iniciarSesion" >
 								Boton para entrar cuando se loguea un usuario
 							</div>
 					</form>
@@ -133,7 +134,7 @@ header("location: perfil.php");
 
       </div><!-- fin cuerpo -->
       <div class="pie">
-       	
+
       </div>
     </div><!-- fin container-->
 

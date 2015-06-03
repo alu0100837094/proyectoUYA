@@ -2,10 +2,10 @@ $(document).ready(function(){
 
 	$("#add_err").css('display', 'none', 'important');
 	 $("#login").click(function(){
-		  username=$("#username").val();
+		  username=$("#email").val();
 		  password=$("#password").val();
 		  $.ajax({
-		   type: "POST",
+		   type: "GET",
 		   url: "login.php",
 			data: "name="+username+"&pwd="+password,
 		   success: function(html){
