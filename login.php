@@ -29,11 +29,11 @@ $password = stripslashes($password);
 $useremail = mysql_real_escape_string($useremail);
 $password = mysql_real_escape_string($password);
 // Selecting Database
-//$db = mysql_select_db($dbname, $connection);
+$db = mysql_select_db($dbname, $connection);
 // SQL query to fetch information of registerd users and finds user match.
-$query = mysql_query("select * from MyGuests where password='$password' AND email=''$useremail''", $connection);
+$query = mysql_query("select * from MyGuests where password='$password' AND email='$useremail'", $connection);
 $rows = mysql_num_rows($query);
-if ($rows == 0) {
+if ($rows == 1) {
 $_SESSION['login_user']=$useremail; // Initializing Session
 header("location: perfil.php"); // Redirecting To Other Page
 } else {
