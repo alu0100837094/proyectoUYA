@@ -5,9 +5,9 @@ $(document).ready(function(){
 		  username=$("#email").val();
 		  password=$("#password").val();
 		  $.ajax({
-		   type: "GET",
+		   type: "POST",
 		   url: "login.php",
-			data: "name="+username+"&pwd="+password,
+			 data: "email="+username+"&password="+password,
 		   success: function(html){
 			if(html=='true')    {
 			 //$("#add_err").html("right username or password");
@@ -15,7 +15,7 @@ $(document).ready(function(){
 			}
 			else    {
 			$("#add_err").css('display', 'inline', 'important');
-			 $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
+			 $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_alerta' width='100' height='100'/>Email o Contraseña incorrecta");
 			}
 		   },
 		   beforeSend:function()
