@@ -14,6 +14,7 @@ header("location: perfil.php");
     <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js" ></script>
 	<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -32,7 +33,7 @@ header("location: perfil.php");
 								Email incorrecto
 							</div>
 							<label id="label_email" for="email" >Email address:</label>
-							<input type="email" name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" id="email">
+							<input id="username" type="email" name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" id="email">
 								<div class="hide" id="EmailUser">
 									Correo electronico del usuario
 								</div>
@@ -42,13 +43,13 @@ header("location: perfil.php");
 								Contraseña incorrecta
 							</div>
 							<label id="label_contraseña" for="pwd">Password:</label>
-							<input type="password" name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" id="pwd">
+							<input id="password" type="password" name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" id="pwd">
 								<div class="hide" id="Contraseña">
 									Contraseña del usuario
 								</div>
 						</div>
-            <input name="submit" type="submit" value=" Login ">
-            <button name="submit" type="submit" value=" Login " role="button" aria-describedby ="iniciarSesion" type="submit" class="btn btn-default">Entrar</button><br><br>
+            <!--<input  name="submit" type="submit" value=" Login "> -->
+            <button id="login" name="submit" type="submit" role="button" aria-describedby ="iniciarSesion" type="submit" class="btn btn-default">Entrar</button><br><br>
 							<div class="hide" id="iniciarSesion" >
 								Boton para entrar cuando se loguea un usuario
 							</div>
