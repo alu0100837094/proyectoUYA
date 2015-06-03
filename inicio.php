@@ -133,18 +133,7 @@ header("location: perfil.php");
 
       </div><!-- fin cuerpo -->
       <div class="pie">
-       	 <div class="row" role="row">
-	 		 <div id="oferta1" class="col-sm-4" >
-	    		<img id="img-oferta1" src="http://www.dinet.tv/img/fotos/pisos%20laminados%201.jpg"  >
-	  		</div>
-	  		<div class="col-sm-4" >
-
-			 </div>
-			 <div class="col-sm-4" >
-
-			 </div>
-
-        </div>
+       	
       </div>
     </div><!-- fin container-->
 

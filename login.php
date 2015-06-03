@@ -21,6 +21,7 @@ $connection = new mysqli($servername, $username2, $password2, $dbname);
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
+$connection->close();
 
 
 // Para proteger de inyección MySQL, para propositos de seguridad
@@ -29,7 +30,7 @@ $password = stripslashes($password);
 $useremail = mysql_real_escape_string($useremail);
 $password = mysql_real_escape_string($password);
 // Selecting Database
-//$db = mysql_select_db($dbname, $connection);
+$db = mysql_select_db($dbname, $connection);
 // SQL query to fetch information of registerd users and finds user match.
 $query = mysql_query("select * from MyGuests where password='$password' AND email=''$useremail''", $connection);
 $rows = mysql_num_rows($query);
