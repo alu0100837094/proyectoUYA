@@ -24,8 +24,11 @@ include('session.php');
   				</div>
 
         </div>
-      </div>  
+
+      </div>
+
     </div>
+
 
 
 
