@@ -26,34 +26,6 @@ $db = mysql_select_db($dbname, $connection);
 $query = mysql_query("select * from MyGuests where password='".$password."' AND email='".$useremail."'", $connection);
 //$qry = "SELECT *  FROM users WHERE email='".useremail."' AND password='".$password."' ";
 
-// if ($result = mysqli_query($connection, $qry)) {
-//    // printf("Select returned %d rows.\n", mysqli_num_rows($result));
-//
-//     /* free result set */
-//
-// }
-//
-// if($result === false) {
-//     var_dump(mysqli_error($connection));
-// }else{
-//
-//
-// //$res = mysqli_query($con,$qry);
-// $num_row = mysqli_num_rows($result);
-// $row=mysqli_fetch_assoc($result);
-// if( $num_row == 1 ) {
-// 	echo 'true';
-// 	$_SESSION['uName'] = $row['username'];
-// 	$_SESSION['Id'] = $row['id'];
-//
-// 	}
-// else {
-// 	echo 'false';
-// }
-// }
-
-
-
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$useremail; // Initializing Session
