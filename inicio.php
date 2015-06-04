@@ -27,7 +27,7 @@ header("location: perfil.php");
 							Imagen de la cabecera
 						</div>
             <div id="text_entrar"><h1> Acceder </h1></div>
-					<form class="form-inline" role="form" action="" method="post"><br>
+					<form class="form-inline" role="form" action="./" method="post"><br>
 						<div id="Correo" role="alertdialog" aria-describedby="Alert_email" class="form-group">
 							<div class="hide" id="Alert_email">
 								Email incorrecto
@@ -43,13 +43,13 @@ header("location: perfil.php");
 								Contraseña incorrecta
 							</div>
 							<label id="label_contraseña" for="pwd">Password:</label>
-							<input id="password" type="password" name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" id="pwd">
+							<input id="password" type="password" name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" id="password">
 								<div class="hide" id="Contraseña">
 									Contraseña del usuario
 								</div>
 						</div>
             <!--<input  name="submit" type="submit" value=" Login "> -->
-            <button id="login" name="submit" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
+            <button id="login" type="submit" name="submit" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
             <div class="err" id="add_err"></div>
               <div class="hide" id="iniciarSesion" >
 								Boton para entrar cuando se loguea un usuario
