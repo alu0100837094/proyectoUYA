@@ -15,7 +15,7 @@ header("location: perfil.php");
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js" ></script>
-	
+
   </head>
   <body>
     <div class="container">
@@ -49,7 +49,7 @@ header("location: perfil.php");
 								</div>
 						</div>
             <!--<input  name="submit" type="submit" value=" Login "> -->
-            <button id="login" name="submit" type="submit" role="button" aria-describedby ="iniciarSesion" type="submit" class="btn btn-default">Entrar</button><br><br>
+            <button id="login" name="submit" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
             <div class="err" id="add_err"></div>
               <div class="hide" id="iniciarSesion" >
 								Boton para entrar cuando se loguea un usuario
