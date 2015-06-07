@@ -48,7 +48,7 @@ header("location: perfil.php");
 									Contraseña del usuario
 								</div>
 						</div>
-            <!--<input  name="submit" type="submit" value=" Login "> -->
+            <input  name="submit" type="submit" value=" Login ">
             <button id="login" name="submit" type="submit" role="button" aria-describedby ="iniciarSesion" type="submit" class="btn btn-default">Entrar</button><br><br>
 							<div class="hide" id="iniciarSesion" >
 								Boton para entrar cuando se loguea un usuario
@@ -133,7 +133,7 @@ header("location: perfil.php");
 
       </div><!-- fin cuerpo -->
       <div class="pie">
-       	
+
       </div>
     </div><!-- fin container-->
 
