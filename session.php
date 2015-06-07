@@ -8,18 +8,18 @@ $password2 = "5sw5CK";
 $dbname = "alu4635";
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
 //$connection = mysql_connect($servername, $username2, $dbname);
-$connection = new mysqli($servername, $useremail, $password, $dbname);
+$connection = new mysqli($servername, $username2, $password2, $dbname);
 // Selecting Database
-// $db = mysql_select_db("MyGuests", $connection);
+$db = mysql_select_db($dbname, $connection);
 session_start();// Starting Session
 // Storing Session
 $user_check=$_SESSION['login_user'];
 // SQL Query To Fetch Complete Information Of User
-$ses_sql=mysql_query("select username from MyGuest where email='$user_check'", $connection);
-$row = mysql_fetch_assoc($ses_sql);
+$ses_sql=mysqli_query($connection,"SELECT email FROM MyGuests WHERE email='$user_check'");
+$row = mysqli_fetch_assoc($ses_sql);
 $login_session =$row['email'];
 if(!isset($login_session)){
-mysql_close($connection); // Closing Connection
-header('Location: perfil.php'); // Redirecting To Home Page
+mysqli_close($connection); // Closing Connection
+header('Location: inicio.php'); // Redirecting To Home Page
 }
 ?>

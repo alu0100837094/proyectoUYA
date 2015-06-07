@@ -23,17 +23,17 @@ $password = mysql_real_escape_string($password);
 $db = mysql_select_db($dbname, $connection);
 // SQL query to fetch information of registerd users and finds user match.
 
-$query = mysql_query("select * from MyGuests where password='".$password."' AND email='".$email."'", $connection);
+$query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND email='$email'", $connection);
+//$consulta=
 //$qry = "SELECT *  FROM users WHERE email='".useremail."' AND password='".$password."' ";
 
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
-$_SESSION['login_user']=$useremail; // Initializing Session
+$_SESSION['login_user']=$email; // Initializing Session
 header("location: perfil.php"); // Redirecting To Other Page
 } else {
 $error = "Email or Password Invalida";
 }
 mysql_close($connection); // Cerrando conexión
-}
-}
+
 ?>

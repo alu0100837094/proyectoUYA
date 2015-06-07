@@ -12,7 +12,7 @@ header("location: perfil.php");
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="script.js" ></script>
 
@@ -51,6 +51,7 @@ header("location: perfil.php");
             <!--<input  name="submit" type="submit" value=" Login "> -->
             <button id="login" type="submit" name="submit" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
             <div class="err" id="add_err"></div>
+            <span><?php echo $error; ?></span>
               <div class="hide" id="iniciarSesion" >
 								Boton para entrar cuando se loguea un usuario
 							</div>
