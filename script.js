@@ -2,14 +2,14 @@ $(document).ready(function(){
 
 	$("#add_err").css('display', 'none', 'important');
 	 $("#login").click(function(){
-		  username=$("#email").val();
+		  email=$("#email").val();
 		  password=$("#password").val();
 			alert(username);
 			alert(password);
 		  $.ajax({
 		   type: "POST",
 		   url: "login.php",
-			 data: "email="+username+"&password="+password,
+			 data: "email="+email+"&password="+password,
 			 success: function(html){
 			if(html=='true')    {
 			 //$("#add_err").html("right username or password");

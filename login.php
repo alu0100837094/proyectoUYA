@@ -2,7 +2,7 @@
 session_start(); // Empezando la sesión
 
 // Define $useremail and $password
-$useremail=$_POST['email'];//john@example.com
+$email=$_POST['email'];//john@example.com
 $password=$_POST['password'];//123456
 
 $servername = "localhost";
@@ -12,18 +12,18 @@ $dbname = "alu4635";
 
 // Estableciendo la conexión con el servidor, pasandole como parametros el servername, el user_id y la password y el nombre de la basedatos
 //$connection = new mysqli($servername, $username2, $password2, $dbname);
-$connection = mysql_connect($servername, $username2, $password2) or die("Could not connect database");
-mysql_select_db($dbname, $connection) or die("Could not select database");
+$connection = new mysqli($servername, $username2, $password2,$dbname) or die("Could not connect database");
+//mysql_select_db($dbname, $connection) or die("Could not select database");
 // Para proteger de inyección MySQL, para propositos de seguridad
-$useremail = stripslashes($useremail);
+$useremail = stripslashes($email);
 $password = stripslashes($password);
-$useremail = mysql_real_escape_string($useremail);
+$useremail = mysql_real_escape_string($email);
 $password = mysql_real_escape_string($password);
 // Selecting Database
 $db = mysql_select_db($dbname, $connection);
 // SQL query to fetch information of registerd users and finds user match.
 
-$query = mysql_query("select * from MyGuests where password='".$password."' AND email='".$useremail."'", $connection);
+$query = mysql_query("select * from MyGuests where password='".$password."' AND email='".$email."'", $connection);
 //$qry = "SELECT *  FROM users WHERE email='".useremail."' AND password='".$password."' ";
 
 $rows = mysql_num_rows($query);
