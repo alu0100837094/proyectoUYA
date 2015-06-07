@@ -1,5 +1,5 @@
 <?php
-include('login.php'); // Includes Login Script
+//include('login.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
 header("location: perfil.php");
@@ -27,7 +27,7 @@ header("location: perfil.php");
 							Imagen de la cabecera
 						</div>
             <div id="text_entrar"><h1> Acceder </h1></div>
-					<form class="form-inline" role="form" action="./" method="post"><br>
+					<form class="form-inline" role="form" action="" method="post"><br>
 						<div id="Correo" role="alertdialog" aria-describedby="Alert_email" class="form-group">
 							<div class="hide" id="Alert_email">
 								Email incorrecto
@@ -48,7 +48,7 @@ header("location: perfil.php");
 									Contraseña del usuario
 								</div>
 						</div>
-            <!--<input  name="submit" type="submit" value=" Login "> -->
+            <input  name="submit" type="submit" value=" Login ">
             <button id="login" type="submit" name="submit" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
             <div class="err" id="add_err"></div>
             <span><?php echo $error; ?></span>

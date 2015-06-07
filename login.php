@@ -1,6 +1,6 @@
 <?php
 session_start(); // Empezando la sesión
-
+echo "entre a la mierda del login de mierda";
 // Define $useremail and $password
 $email=$_POST['email'];//john@example.com
 $password=$_POST['password'];//123456
