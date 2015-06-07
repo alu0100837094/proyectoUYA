@@ -9,6 +9,7 @@ $servername = "localhost";
 $username2 = "alu4635";
 $password2 = "5sw5CK";
 $dbname = "alu4635";
+echo "$email.$password";
 
 // Estableciendo la conexión con el servidor, pasandole como parametros el servername, el user_id y la password y el nombre de la basedatos
 //$connection = new mysqli($servername, $username2, $password2, $dbname);
@@ -23,7 +24,9 @@ $password = mysql_real_escape_string($password);
 $db = mysql_select_db($dbname, $connection);
 // SQL query to fetch information of registerd users and finds user match.
 
-$query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND email='$email'", $connection);
+$query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND email='$email", $connection) or die('Consulta fallida :' .mysql_error());
+
+
 //$consulta=
 //$qry = "SELECT *  FROM users WHERE email='".useremail."' AND password='".$password."' ";
 
