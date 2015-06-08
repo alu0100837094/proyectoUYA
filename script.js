@@ -17,18 +17,18 @@ $(document).ready(function(){
    data: "email="+email+"&password="+password,
      success: function(html){
 
-      //alert("Entre al succes"+html);
-     window.location="perfil.php";
+      alert("Entre al succes"+html);
+     //window.location="perfil.php";
 
 
-   /*if(html=='true')    {
+   if(html=='true')    {
     //$("#add_err").html("right username or password");
     window.location="perfil.php";
    }
    else    {
    $("#add_err").css('display', 'inline', 'important');
     $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
-   }*/
+   }
      },
      error:function(){
       alert("Error con ajax");

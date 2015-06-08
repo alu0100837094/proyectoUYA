@@ -8,7 +8,7 @@ echo '<script type="text/javascript"> 	$("#add_err").html("Llene ambos campos");
 else
 {
 
-echo "----Entre al Loguin.php----";
+//echo "----Entre al Loguin.php----";
 // Define $useremail and $password
 $email=$_POST['email'];//john@example.com
 $password=$_POST['password'];//123456
@@ -17,7 +17,7 @@ $servername = "localhost";
 $username2 = "alu4635";
 $password2 = "5sw5CK";
 $dbname = "alu4635";
-echo "$email.$password";
+//echo "$email.$password";
 
 // Estableciendo la conexión con el servidor, pasandole como parametros el servername, el user_id y la password y el nombre de la basedatos
 //$connection = new mysqli($servername, $username2, $password2, $dbname);
@@ -41,11 +41,13 @@ $query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND emai
 $rows = mysql_num_rows($query);
 if ($rows == 1) {
 $_SESSION['login_user']=$email; // Initializing Session
-header("location: perfil.php"); // Redirecting To Other Page
+echo "true"; // Redirecting To Other Page
 } else {
 //echo"Contraseña y/o email incorrectos";
-echo '<script type="text/javascript"> 	$("#add_err").html("<p>Compruebe que el email y la contraseña esten correctos</p>");</script>';
-$error = "Email or Password Invalida";
+echo "false";
+//echo "Correo electronico o contraseña invalidos";
+//echo '<script type="text/javascript"> 	$("#add_err").html("<p>Compruebe que el email y la contraseña esten correctos</p>");</script>';
+//$error = "Email or Password Invalida";
 }
 mysql_close($connection); // Cerrando conexión
 }
