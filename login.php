@@ -1,6 +1,6 @@
 <?php
 session_start(); // Empezando la sesión
-echo "entre a la mierda del login de mierda";
+echo "----Entre al Loguin.php----";
 // Define $useremail and $password
 $email=$_POST['email'];//john@example.com
 $password=$_POST['password'];//123456
@@ -13,7 +13,7 @@ echo "$email.$password";
 
 // Estableciendo la conexión con el servidor, pasandole como parametros el servername, el user_id y la password y el nombre de la basedatos
 //$connection = new mysqli($servername, $username2, $password2, $dbname);
-$connection = new mysqli($servername, $username2, $password2,$dbname) or die("Could not connect database");
+$connection = mysql_connect($servername, $username2, $password2,$dbname) or die("Could not connect database :" . mysql_error());
 //mysql_select_db($dbname, $connection) or die("Could not select database");
 // Para proteger de inyección MySQL, para propositos de seguridad
 $useremail = stripslashes($email);
@@ -21,10 +21,10 @@ $password = stripslashes($password);
 $useremail = mysql_real_escape_string($email);
 $password = mysql_real_escape_string($password);
 // Selecting Database
-$db = mysql_select_db($dbname, $connection);
+$db = mysql_select_db($dbname, $connection) or die("no se pudo seleccionar la base de datos : " . mysql_error());
 // SQL query to fetch information of registerd users and finds user match.
 
-$query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND email='$email", $connection) or die('Consulta fallida :' .mysql_error());
+$query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND email='$email'", $connection) or die('Consulta fallida :' .mysql_error());
 
 
 //$consulta=
