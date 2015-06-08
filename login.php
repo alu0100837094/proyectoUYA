@@ -1,5 +1,13 @@
 <?php
 session_start(); // Empezando la sesión
+$error=''; // Variable To Store Error Message
+if (empty($_POST['email']) || empty($_POST['password'])) {
+$error = "Llene ambos campos";
+echo '<script type="text/javascript"> 	$("#add_err").html("Llene ambos campos");</script>';
+}
+else
+{
+
 echo "----Entre al Loguin.php----";
 // Define $useremail and $password
 $email=$_POST['email'];//john@example.com
@@ -35,8 +43,11 @@ if ($rows == 1) {
 $_SESSION['login_user']=$email; // Initializing Session
 header("location: perfil.php"); // Redirecting To Other Page
 } else {
+//echo"Contraseña y/o email incorrectos";
+echo '<script type="text/javascript"> 	$("#add_err").html("<p>Compruebe que el email y la contraseña esten correctos</p>");</script>';
 $error = "Email or Password Invalida";
 }
 mysql_close($connection); // Cerrando conexión
+}
 
 ?>

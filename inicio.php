@@ -27,13 +27,13 @@ header("location: perfil.php");
 							Imagen de la cabecera
 						</div>
             <div id="text_entrar"><h1> Acceder </h1></div>
-					<form class="form-inline" role="form" action="" method="post"><br>
+					<form class="form-inline" role="form" action="#" method="post"><br>
 						<div id="Correo" role="alertdialog" aria-describedby="Alert_email" class="form-group">
 							<div class="hide" id="Alert_email">
 								Email incorrecto
 							</div>
 							<label id="label_email" for="email" >Email address:</label>
-							<input id="email" type="email" name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" id="email">
+							<input type="email" class="form-control" id="email"  name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" required>
 								<div class="hide" id="EmailUser">
 									Correo electronico del usuario
 								</div>
@@ -43,13 +43,13 @@ header("location: perfil.php");
 								Contraseña incorrecta
 							</div>
 							<label id="label_contraseña" for="pwd">Password:</label>
-							<input id="password" type="password" name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" id="password">
+							<input type="password" class="form-control" id="password"  name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" required>
 								<div class="hide" id="Contraseña">
 									Contraseña del usuario
 								</div>
 						</div>
-            <input  name="submit" type="submit" value=" Login ">
-            <button id="login" type="submit" name="submit" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
+            <!--<input  name="submit" type="submit" value=" Login " class="btn btn-default">-->
+            <button type="submit" id="login" name="submit"  value="Entrar" role="button" aria-describedby ="iniciarSesion" class="btn btn-default">Entrar</button><br><br>
             <div class="err" id="add_err"></div>
             <span><?php echo $error; ?></span>
               <div class="hide" id="iniciarSesion" >
