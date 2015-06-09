@@ -43,6 +43,17 @@ $(document).ready(function(){
 
 
   return false;
+}); //fin function de login
+
+
+
+ $("registrar").click(function(){
+   nombre=$("#nombre").val();
+   apellidos=$("#apellidos").val();
+   emailR=$("#emailR").val();
+   passwordR=$("#passwordR").val();
+
+
  });
 
 

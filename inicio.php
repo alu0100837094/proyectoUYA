@@ -72,7 +72,7 @@ header("location: perfil.php");
 			              	<div id="Nombre_" class="form-group">
 				                	<label id="label_nombre" for="inputNombre" class="col-sm-0 control-label"></label>
 					               <div class="col-sm-10">
-					                	<input type="text" role="textbox" aria-labelledby="Nombre_ label_nombre" aria-required="true" aria-describedby="Nombre" class="form-control" id="inputNombre" placeholder="Nombre">
+					                	<input id="nombre" type="text" role="textbox" aria-labelledby="Nombre_ label_nombre" aria-required="true" aria-describedby="Nombre" class="form-control" id="inputNombre" placeholder="Nombre">
 											<div class="hide" id="Nombre">
 												Nombre de usuario para registrarse
 											</div>
@@ -82,7 +82,7 @@ header("location: perfil.php");
 				              <div id="Apellidos_" class="form-group">
 				                	<label id="label_apellidos" for="inputApellidos" class="col-sm-0 control-label"></label>
 				  	             <div class="col-sm-10">
-						               <input type="text" aria-labelledby="Apellidos_ label_apellidos" role="textbox" aria-required="true"aria-describedby="Apellidos" class="form-control" id="inputApellidos" placeholder="Apellidos">
+						               <input id="apellidos" type="text" aria-labelledby="Apellidos_ label_apellidos" role="textbox" aria-required="true"aria-describedby="Apellidos" class="form-control" id="inputApellidos" placeholder="Apellidos">
 											<div class="hide" id="Apellidos">
 												Apellidos del usuario para registrarse
 											</div>
@@ -91,7 +91,7 @@ header("location: perfil.php");
 			            	<div id="Email_" class="form-group">
 					              <label id="label_correo" for="inputEmail2" class="col-sm-0 control-label"></label>
 				              	<div class="col-sm-10">
-					                  	<input type="email" aria-labelledby="Email_ label_correo" aria-required="true" aria-describedby="Email" class="form-control" id="inputEmail2" placeholder="Email">
+					                  	<input id="emailR" type="email" aria-labelledby="Email_ label_correo" aria-required="true" aria-describedby="Email" class="form-control" id="inputEmail2" placeholder="Email">
 											<div class="hide" id="Email">
 												Email requerido para registrarse
 											</div>
@@ -101,13 +101,22 @@ header("location: perfil.php");
 				            <div id="passwd" class="form-group">
 					              <label id="label_pwd" for="inputPassword3" class="col-sm-0 control-label"></label>
 					            	<div class="col-sm-10">
-						              	<input type="password" aria-labelledby="passwd label_pwd" aria-required="true" aria-describedby="Contraseña" class="form-control" id="inputPassword3" placeholder="Password">
+						              	<input id="passwordR" type="password" aria-labelledby="passwd label_pwd" aria-required="true" aria-describedby="ContraseñaR" class="form-control" id="inputPassword3" placeholder="Password">
 											<div class="hide" id="Contraseña">
 												Contraseña para registrarse
 											</div>
 					            	</div>
 			          	</div>
-			          	<div class="form-group">
+                  <div id="passwd2" class="form-group">
+                      <label id="label_pwd2" for="inputPassword4" class="col-sm-0 control-label"></label>
+                      <div class="col-sm-10">
+                          <input id="passwordR2" type="password" aria-labelledby="passwd2 label_pwd2" aria-required="true" aria-describedby="ComprobarContraseña" class="form-control" id="inputPassword4" placeholder="Comprobar Password">
+                    <div class="hide" id="ComprobarContraseña">
+                      Comprobar Contraseña para registrarse
+                    </div>
+                      </div>
+                </div>
+			          	<!--<div class="form-group">
 				            	<div class="col-sm-offset-0 col-sm-10">
 					              	<div class="checkbox">
 							              <label>
@@ -118,11 +127,11 @@ header("location: perfil.php");
 							              </label>
 						              </div>
 					            </div>
-				        </div>
+				        </div>-->
 				        <div class="form-group">
 				          	<div class="col-sm-offset-0 col-sm-10">
-						            <button role="button" aria-describedby ="Registrar" type="submit" class="btn btn-default">Sign in</button>
-										<div class="hide" id="Registrar" >
+						            <button id="registrar" role="button" aria-describedby ="Registrarb" type="submit" class="btn btn-default">Registrarse</button>
+										<div class="hide" id="Registrarb" >
 											Boton para registrar un usuario
 										</div>
 					         </div>
