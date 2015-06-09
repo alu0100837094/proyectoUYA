@@ -116,22 +116,13 @@ header("location: perfil.php");
                     </div>
                       </div>
                 </div>
-			          	<!--<div class="form-group">
-				            	<div class="col-sm-offset-0 col-sm-10">
-					              	<div class="checkbox">
-							              <label>
-								            	<input role="checkbox" aria-checked="Recordar" type="checkbox"> Remember me
-													<div class="hide" id="Recordar">
-														Recordarme
-													</div>
-							              </label>
-						              </div>
-					            </div>
-				        </div>-->
-				        <div class="form-group">
+			          <div class="form-group">
 				          	<div class="col-sm-offset-0 col-sm-10">
-						            <button id="registrar" role="button" aria-describedby ="Registrarb" type="submit" class="btn btn-default">Registrarse</button>
-										<div class="hide" id="Registrarb" >
+						            <!--<button id="registrar" role="button" aria-describedby ="Registrarb" type="submit" class="btn btn-default">Registrarse</button>-->
+                        <button type="submit" id="registrar" role="button" aria-describedby ="registrarse" class="btn btn-default">Registrarse</button><br><br>
+
+                        <div class="err" id="add_errR"></div>
+                    <div class="hide" id="registrarse" >
 											Boton para registrar un usuario
 										</div>
 					         </div>

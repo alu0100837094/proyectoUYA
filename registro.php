@@ -1,5 +1,6 @@
 <?PHP
 //Datos que recibe PHP desde el script
+echo "----Entre al registro.php----";
 $nombre=$_POST['nombre'];
 $apellidos=$_POST['apellidos'];
 $emailR=$_POST['emailR'];

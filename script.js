@@ -43,17 +43,17 @@ $(document).ready(function(){
 
 
   return false;
-}); //fin function de login
+});
 
 //______________________________________________________________________________________________________________________
 
- $("registrar").click(function(){
+ $("#registrar").click(function(){
    nombre=$("#nombre").val();
    apellidos=$("#apellidos").val();
    emailR=$("#emailR").val();
    passwordR=$("#passwordR").val();
    passwordR2=$('#passwordR2').val();
-   alert(nombre+apellidos+emailR+passwordR2+passwordR);
+   alert("Esta mandando esto : "+nombre+apellidos+emailR+passwordR2+passwordR);
 
    if(emailR =='' || passwordR =='' || apellidos == '' || nombre == '' || passwordR2 == ''){
      $("#add_errR").html("<p>Llene todos los campos</p>");
@@ -92,11 +92,5 @@ $(document).ready(function(){
 
 
  return false;
-}); //fin function de registro
-
-
-
- });
-
-
+});
 });
