@@ -12,10 +12,10 @@ $(document).ready(function(){
 		else
 		{
 			$.ajax({
-     type: "POST",
-     url: "login.php",
-   data: "email="+email+"&password="+password,
-     success: function(html){
+      type: "POST",
+      url: "login.php",
+      data: "email="+email+"&password="+password,
+      success: function(html){
 
       alert("Entre al succes"+html);
      //window.location="perfil.php";
