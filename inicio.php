@@ -22,7 +22,7 @@ header("location: perfil.php");
       <div class="Cabecera">
           <div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="100"><br><br><br>
+					<img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded img-responsive" alt="imagen_azul" width="1200" height="100"><br><br><br>
 						<div class="hide" id="img_cabecera">
 							Imagen de la cabecera
 						</div>
@@ -58,13 +58,13 @@ header("location: perfil.php");
 					</form>
 				</div>
 			</div>
-      <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
+      <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="30"><br><br><br>
 
 		</div>
       <div class="Cuerpo">
            <div class="row" role="rowgroup">
 			   <div class="col-sm-6">
-					<img src= "http://www.myqualityhome.es/wp-content/uploads/2014/12/salazul.jpg" class="img-rounded" alt="imagen_azul" width="500" height="500">
+					<img src= "http://www.myqualityhome.es/wp-content/uploads/2014/12/salazul.jpg" class="img-rounded img-responsive" alt="imagen_azul" width="500" height="500">
 				</div>
                <div class="col-sm-6">
                    <form id="regform" class="form-horizontal" role="form" action="#" method="post">
@@ -133,11 +133,27 @@ header("location: perfil.php");
 	 </div> <!-- fin col -->
   </div><!-- fin row -->
 
-      </div><!-- fin cuerpo -->
-      <div class="pie">
 
+  <div class="pie">
+    <br><br>
+    <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
+
+    <div class="row" role="row">
+      <div class="col-sm-4" >
+        <button type="button" class="btn btn-link">Ayuda</button>
       </div>
-    </div><!-- fin container-->
+      <div class="col-sm-4" >
+        <button type="button" class="btn btn-link">Acerca de</button>
+      </div>
+      <div class="col-sm-4" >
+        <button type="button" class="btn btn-link">Politicas de privacidad</button>
+      </div>
+    </div>
+  </div><!-- pie-->
+
+</div><!-- fin container -->
+
+
 
 
   </body>
