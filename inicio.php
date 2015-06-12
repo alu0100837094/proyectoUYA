@@ -27,7 +27,7 @@ header("location: perfil.php");
 							Imagen de la cabecera
 						</div>
             <div id="text_entrar"><h1> Acceder </h1></div>
-					<form class="form-inline" role="form" action="#" method="post"><br>
+					<form id="logForm" class="form-inline" role="form" action="#" method="post"><br>
 						<div id="Correo" role="alertdialog" aria-describedby="Alert_email" class="form-group">
 							<div class="hide" id="Alert_email">
 								Email incorrecto
@@ -67,7 +67,7 @@ header("location: perfil.php");
 					<img src= "http://www.myqualityhome.es/wp-content/uploads/2014/12/salazul.jpg" class="img-rounded" alt="imagen_azul" width="500" height="500">
 				</div>
                <div class="col-sm-6">
-                   <form class="form-horizontal" role="form">
+                   <form id="regform" class="form-horizontal" role="form" action="#" method="post">
                      <div id="text_registro"><h2> Registrarse </h2></div><br>
 			              	<div id="Nombre_" class="form-group">
 				                	<label id="label_nombre" for="inputNombre" class="col-sm-0 control-label"></label>

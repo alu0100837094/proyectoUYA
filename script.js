@@ -53,6 +53,10 @@ $(document).ready(function(){
    emailR=$("#emailR").val();
    passwordR=$("#passwordR").val();
    passwordR2=$('#passwordR2').val();
+   var formDatos= $("#regform").serialize();
+   var datos={"nombre":nombre,"apellidos":apellidos,"emailR":emailR,"passwordR":passwordR};
+   var data= "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2;
+   alert("lo que serializo " +data);
    alert("Esta mandando esto : "+nombre+apellidos+emailR+passwordR2+passwordR);
 
    if(emailR =='' || passwordR =='' || apellidos == '' || nombre == '' || passwordR2 == ''){
@@ -63,8 +67,11 @@ $(document).ready(function(){
      $.ajax({
      type: "POST",
      url: "registro.php",
-     data: "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2,
+     data: data,
+     //dataType: "json",
+     //data: "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2,
      success: function(html){
+       
 
      alert("Entre al succes de registro"+html);
     //window.location="perfil.php";
@@ -79,7 +86,22 @@ $(document).ready(function(){
    $("#add_err").html("<img src='images/alert.png' />Correo electrónico ya registrado");
   }
     },
-    error:function(){
+    error:function(jqXHR,exception)
+    { if (jqXHR.status === 0) {
+        alert('Not connected.\nPlease verify your network connection.');
+    } else if (jqXHR.status == 404) {
+      alert('The requested page not found. [404]');
+    } else if (jqXHR.status == 500) {
+      alert('Internal Server Error [500].');
+    } else if (exception === 'parsererror') {
+      alert('Requested JSON parse failed.');
+    } else if (exception === 'timeout') {
+      alert('Time out error.');
+    } else if (exception === 'abort') {
+      alert('Ajax request aborted.');
+    } else {
+      alert('Uncaught Error.\n' + jqXHR.responseText);
+    }
      alert("Error con ajax");
      },
  //    beforeSend:function()
