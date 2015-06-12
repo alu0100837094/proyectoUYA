@@ -27,7 +27,7 @@ $(document).ready(function(){
    }
    else    {
    $("#add_err").css('display', 'inline', 'important');
-    $("#add_err").html("<img src='images/alert.png' />Wrong username or password");
+    $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
    }
      },
      error:function(){
@@ -71,7 +71,7 @@ $(document).ready(function(){
      //dataType: "json",
      //data: "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2,
      success: function(html){
-       
+
 
      alert("Entre al succes de registro"+html);
     //window.location="perfil.php";
@@ -82,8 +82,8 @@ $(document).ready(function(){
    window.location="registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
   }
   else    {
-  $("#add_err").css('display', 'inline', 'important');
-   $("#add_err").html("<img src='images/alert.png' />Correo electrónico ya registrado");
+  $("#add_errR").css('display', 'inline', 'important');
+   $("#add_errR").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50'/>Correo electrónico ya está registrado");
   }
     },
     error:function(jqXHR,exception)

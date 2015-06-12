@@ -121,7 +121,7 @@ header("location: perfil.php");
 						            <!--<button id="registrar" role="button" aria-describedby ="Registrarb" type="submit" class="btn btn-default">Registrarse</button>-->
                         <button type="submit" id="registrar" role="button" aria-describedby ="registrarse" class="btn btn-default">Registrarse</button><br><br>
 
-                        <div class="err" id="add_errR"></div>
+                        <div class="errR" id="add_errR"></div>
                     <div class="hide" id="registrarse" >
 											Boton para registrar un usuario
 										</div>
