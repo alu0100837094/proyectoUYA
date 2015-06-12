@@ -1,3 +1,7 @@
+<?php
+include('session.php');
+echo"Entre a perfil.php";
+?>
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -15,19 +19,19 @@
           <div class="row" role="rowgroup">
 				<div class="col-sm-12">
 					<img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="100"><br><br><br>
-						
+
 						<ul class="nav nav-tabs">
 							  <li role="presentation" class="active"><a href="#">Inicio</a></li>
 							  <li role="presentation"><a href="#">Perfil</a></li>
 							  <li role="presentation"><a href="#">Messages</a></li>
-							  <li role="presentation"><a href="#">Publicar</a></li>		 
+							  <li role="presentation"><a href="#">Publicar</a></li>
 							  <li role="presentation"><a href="#">Búsqueda</a></li>
 							  <li role="presentation"><a href="#">Favoritos</a></li>
 						</ul>
 						<div class="hide" id="img_cabecera">
 							Imagen de la cabecera
 						</div>
-            
+
       	</div>
 
 	 </div> <!-- fin col -->
@@ -37,7 +41,7 @@
       <div class="pie">
        	 <div class="row" role="row">
 	 		 <div id="oferta1" class="col-sm-4" >
-	    		
+
 	  		<div class="col-sm-4" >
 
 			 </div>
