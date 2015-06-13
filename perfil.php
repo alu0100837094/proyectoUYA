@@ -18,7 +18,7 @@ echo"Entre a perfil.php";
   		<div class="cabecera">
   			<div class="row" role="rowgroup">
   				<div class="col-sm-12">
-  					<img src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded responsive" alt="imagen_azul" width="1200" height="50"><br><br><br>
+  					<img src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded img-responsive" alt="imagen_azul" width="1200" height="50"><br><br><br>
   				</div>
   			</div>
   			<div class="row" role="rowgroup">
@@ -51,6 +51,8 @@ echo"Entre a perfil.php";
   		</div><!-- fin cuerpo-->
   		<br><br><br><br><br><br><br><br><br><br><br><br>
   		<div class="pie">
+        <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
+
   			<div class="row" role="row">
   				<div class="col-sm-4" >
   					<button type="button" class="btn btn-link">Ayuda</button>
