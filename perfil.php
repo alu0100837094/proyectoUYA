@@ -22,23 +22,45 @@ echo"Entre a perfil.php";
   				</div>
   			</div>
   			<div class="row" role="rowgroup">
-  				<div class="col-sm-9">
-  					<ul class="nav nav-tabs nav-collapse">
+  				<div id="menunav" class="col-sm-12">
+            <nav role="navigation" class="navbar navbar-default ">
+              <div class="container-fluid">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                      <div class="navbar-header">
+                          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                          </button>
+                          <a href="/perfil.php" class="navbar-brand">BuscandoPiso.com</a>
+                      </div>
+                      <!-- Collection of nav links and other content for toggling -->
+                      <div id="navbarCollapse" class="collapse navbar-collapse">
+                          <ul class="nav navbar-nav">
+                              <li><a href="#">Buscar</a></li>
+                              <li class="active"><a href="#">Perfil</a></li>
+                              <li><a href="#">Mensajes</a></li>
+                              <li><a href="#">Publicar</a></li>
+                              <li><a href="#">Favoritos</a></li>
+                          </ul>
+                          <ul class="nav navbar-nav navbar-right">
+                              <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
+                              <li><a href="#">Cerra sesión</a></li>
+                          </ul>
+                      </div>
+              </div>
+        </nav>
+
+  					<!-- <ul class="nav nav-tabs nav-collapse">
   						<li role="presentation" ><a href="#">Inicio</a></li>
   						<li role="presentation" class="active"><a href="#">Perfil</a></li>
   						<li role="presentation"><a href="#">Messages</a></li>
   						<li role="presentation"><a href="#">Publicar</a></li>
   						<li role="presentation"><a href="#">Favoritos</a></li>
-  					</ul>
+  					</ul> -->
   				</div><!-- fin menu navegacion -->
-          <div class="col-sm-3">
 
-              <div id="perfil">
-              <b id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></b>
-              <b id="logout"><a href="logout.php">Cerrar sesión</a></b>
-              </div>
-
-  				</div><!-- fin menu navegacion -->
   			</div><!-- fin row -->
   		</div><!--fin cabecera-->
   		<div class="cuerpo">
