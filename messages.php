@@ -40,11 +40,11 @@ echo"Entre a perfil.php";
                     <!-- Collection of nav links and other content for toggling -->
                     <div id="navbarCollapse" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Buscar</a></li>
-                            <li ><a href="#">Perfil</a></li>
+                            <li><a href="/alu4635/busqu.php">Buscar</a></li>
+                            <li><a href="/alu4348/perfil.php">Perfil</a></li>
                             <li class="active"><a href="#">Mensajes</a></li>
-                            <li><a href="#">Publicar</a></li>
-                            <li><a href="#">Favoritos</a></li>
+                            <li><a href="/alu4635/publicar.php">Publicar</a></li>
+                            <li><a href="/alu4635/favoritos.php">Favoritos</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>

@@ -61,9 +61,9 @@ echo"Entre a perfil.php";
       <div class="cuerpo">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<form class="form-inline">
+					<form id="form_buscar"class="form-inline">
 						<div class="form-group">
-							<label for="zona">Zona</label>
+							<label id="Zona"for="zona">Zona</label>
 								<select name="zona_buscar" class="form-control">
 									<option value="*" role="option">Todos</option>
 									<option value="santa-cruz-de-tenerife">Santa Cruz de Tenerife</option>
@@ -77,9 +77,9 @@ echo"Entre a perfil.php";
 								</select>
 						   </div>
 						   <div class="form-group">
-								<label for="dormi">Precio</label>
+								<label id="Precio" for="dormi">Precio</label>
 									<select name="precio_buscar_d" class="form-control">
-										<option>Desde €</option>
+										<optionvalue="*" role="option">Desde €</option>
 										<option>200</option>
 										<option>300</option>
 										<option>400</option>
@@ -88,7 +88,7 @@ echo"Entre a perfil.php";
 										<option value="*" role="option">Todos</option>
 									</select>
 									<select name="precio_buscar_h" class="form-control">
-										<option>Hasta €</option>
+										<option value="*" role="option">Hasta €</option>
 										<option>300</option>
 										<option>400</option>
 										<option>500</option>
@@ -99,10 +99,9 @@ echo"Entre a perfil.php";
 									</select>
 						   </div>
 						   <div class="form-group">
-								<label for="dormi">Dormitorios</label>
+								<label id ="Dormitorios" for="dormi">Dormitorios</label>
 									<select name="dormitorios"  class="form-control">
 										<option value="*" role="option">Todos</option>
-										<option>0</option>
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -111,10 +110,9 @@ echo"Entre a perfil.php";
 									</select>
 						   </div>
 						   <div class="form-group">
-								<label for="banos">Baños</label>
+								<label id ="Banos" for="banos">Baños</label>
 								<select name="banos"  class="form-control">
 									<option value="*" role="option">Todos</option>
-									<option>0</option>
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -127,6 +125,7 @@ echo"Entre a perfil.php";
 				</div>
 
 			</div>
+      <div id="respuesta"></div>
       </div><!-- fin cuerpo -->
 	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <div class="pie">
