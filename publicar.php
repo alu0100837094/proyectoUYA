@@ -23,13 +23,34 @@ echo"Entre a perfil.php";
 			</div>
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<ul class="nav nav-tabs nav-collapse">
-						<li role="presentation" ><a href="#">Inicio</a></li>
-						<li role="presentation"><a href="#">Perfil</a></li>
-						<li role="presentation"><a href="#">Messages</a></li>
-						<li role="presentation" class="active"><a href=#">Publicar</a></li>
-						<li role="presentation"><a href="#">Favoritos</a></li>
-					</ul>
+          <nav role="navigation" class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">BuscandoPiso.com</a>
+                    </div>
+                    <!-- Collection of nav links and other content for toggling -->
+                    <div id="navbarCollapse" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Buscar</a></li>
+                            <li ><a href="#">Perfil</a></li>
+                            <li><a href="#">Mensajes</a></li>
+                            <li class="active"><a href="#">Publicar</a></li>
+                            <li><a href="#">Favoritos</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
+                            <li><a href="/alu4635/logout.php">Cerra sesión</a></li>
+                        </ul>
+                    </div>
+            </div>
+      </nav>
 				</div><!-- fin menu navegacion -->
 			</div><!-- fin row -->
 		</div><!--fin cabecera-->
@@ -40,7 +61,7 @@ echo"Entre a perfil.php";
 						<div class="form-group">
 							<br><br>
 							<label for="ejemplo_archivo_1">Adjuntar un archivo</label><br><br>
-							<input type="file" id="ejemplo_archivo_1"><br>
+							<input class="btn" type="file" id="ejemplo_archivo_1"><br>
 							<textarea class="form-control" placeholder="Añada una descripción" rows="3"></textarea>
 						</div><!--fin adjuntar archivo-->
 						<div class="form-group">
@@ -58,14 +79,14 @@ echo"Entre a perfil.php";
 								</select>
 						</div><!--fin zona-->
 						<div class="form-group">
-							<label for="dormi">Precio</label>
+							<label for="dormi">Precio €</label>
 								<select class="form-control">
-									<option>0€</option>
-									<option>200€</option>
-									<option>300€</option>
-									<option>400€</option>
-									<option>500€</option>
-									<option>600€</option>
+									<option>0</option>
+									<option>200</option>
+									<option>300</option>
+									<option>400</option>
+									<option>500</option>
+									<option>600</option>
 								</select>
 						</div><!--fin precio-->
 						<div class="form-group">

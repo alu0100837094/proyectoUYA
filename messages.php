@@ -1,4 +1,7 @@
-
+<?php
+include('session.php');
+echo"Entre a perfil.php";
+?>
 <!DOCTYPE html>
 
 
@@ -22,13 +25,34 @@
 			</div>
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<ul class="nav nav-tabs nav-collapse">
-						<li role="presentation" ><a href="#">Inicio</a></li>
-						<li role="presentation"><a href="#">Perfil</a></li>
-						<li role="presentation" class="active"><a href="#">Messages</a></li>
-						<li role="presentation"><a href="#">Publicar</a></li>		 
-						<li role="presentation"><a href="#">Favoritos</a></li>
-					</ul>
+          <nav role="navigation" class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">BuscandoPiso.com</a>
+                    </div>
+                    <!-- Collection of nav links and other content for toggling -->
+                    <div id="navbarCollapse" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Buscar</a></li>
+                            <li ><a href="#">Perfil</a></li>
+                            <li class="active"><a href="#">Mensajes</a></li>
+                            <li><a href="#">Publicar</a></li>
+                            <li><a href="#">Favoritos</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
+                            <li><a href="/alu4635/logout.php">Cerra sesión</a></li>
+                        </ul>
+                    </div>
+            </div>
+      </nav>
 				</div><!-- fin menu navegacion -->
 			</div><!-- fin row -->
 		</div><!--fin cabecera-->
