@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+
+
+<html lang="es">
+  <head>
+		<title>Contacto</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+		<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
+  </head>
+  <body>
+	<div class="container">
+		<div class="cabecera">
+			<div class="row" role="rowgroup">
+				<div class="col-sm-12">
+					<img src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="50"><br><br><br>
+				</div>
+			</div>
+			<div class="row" role="rowgroup">
+				<div class="col-sm-12">
+					<ul class="nav nav-tabs nav-collapse">
+						<li role="presentation" ><a href="#">Inicio</a></li>
+						<li role="presentation"><a href="#">Perfil</a></li>
+						<li role="presentation"><a href="#">Messages</a></li>
+						<li role="presentation"><a href="#">Buscar</a></li>
+						<li role="presentation"><a href="#">Publicar</a></li>		 
+						<li role="presentation"><a href="#">Favoritos</a></li>
+					</ul>
+				</div><!-- fin menu navegacion -->
+			</div><!-- fin row -->
+		</div><!--fin cabecera-->
+		<div class="cuerpo">
+			<div class="row" role="rowgroup">
+				<div class="col-sm-12">
+				      <div id="textoContacto" class="col-xs-12 col-sm-12 col-md-12" role="note"><br><br>
+					   <p class="text-justify">Aquí podrá realizarnos una consulta. En el menor tiempo posible te responderemos. Cualquier sugerencia,
+                                           duda, queja o propuesta de mejora es bien recibida. No dudes en darnos tu opinión.</p><br><br>
+				     </div>
+				 </div>
+				<div class="row">			
+				    <div class=" col-sm-12 ">
+					<form method="get" id="form_contacto" onsubmit="validarContacto(); return false;">
+						 <div id="avisos"></div>
+						    <table>
+							  <tr>
+							    <td>
+								<label for="Nombre">Su nombre</label>:
+							    </td>
+							    <td>
+								<input type="text" id="Nombre" name="Nombre" value="" maxlength="20" aria-required="true" tabindex="7" >
+							    </td>
+							  </tr>
+							<tr>
+							  <td>
+								<label for="Email">E-mail</label>:
+							  </td>
+							  <td>
+								<input type="text" id="Email" name="Email" value="" maxlength="50" aria-required="true" tabindex="8" >
+							  </td>
+						       </tr>
+						       <tr>
+							  <td>
+								<label for="Consulta">Consulta</label>:
+							</td>
+							<td>
+								<textarea name="Consulta" id="Consulta" rows="4" cols="30" aria-required="true" tabindex="9"> </textarea>
+							</td>
+						      </tr>
+						       <tr>
+						           <td>
+								<input type="submit" value="Enviar" class="btn btn-primary btn-lg" tabindex="10">					    
+						         </td>
+						      </tr>
+					      </table>
+					    </div>
+				</form>
+			</div><!-- fin col-->
+		</div><!--fin row-->
+	  </div><!-- fin cuerpo-->
+		<div class="pie"><br><br>
+			<div class="row" role="row">
+				<div class="col-sm-4" >
+					<button type="button" class="btn btn-link">Ayuda</button>
+				</div>
+				<div class="col-sm-4" >
+					<button type="button" class="btn btn-link">Acerca de</button>
+				</div>
+				<div class="col-sm-4" >
+					<button type="button" class="btn btn-link">Politicas de privacidad</button>
+				</div>
+			</div>
+		</div><!-- pie-->
+
+  </body>
+ </html>
