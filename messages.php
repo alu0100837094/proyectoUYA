@@ -71,17 +71,22 @@ echo"Entre a perfil.php";
 		</div><!-- fin cuerpo-->
 		<br><br><br><br><br><br><br><br><br><br><br><br>
 		<div class="pie">
-			<div class="row" role="row">
-				<div class="col-sm-4" >
-					<button type="button" class="btn btn-link">Ayuda</button>
-				</div>
-				<div class="col-sm-4" >
-					<button type="button" class="btn btn-link">Acerca de</button>
-				</div>
-				<div class="col-sm-4" >
-					<button type="button" class="btn btn-link">Politicas de privacidad</button>
-				</div>
-			</div>
+      <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
+
+      <div class="row" role="row">
+        <div class="col-sm-4" >
+          <!-- <button type="button" class="btn btn-link">Ayuda</button> -->
+          <a href="/alu4635/ayuda.html">Ayuda</a>
+        </div>
+        <div class="col-sm-4" >
+          <!-- <button type="button" class="btn btn-link">Acerca de</button> -->
+            <a href="/alu4635/contacto.html">Contacto</a>
+        </div>
+        <div class="col-sm-4" >
+          <!-- <button type="button" class="btn btn-link">Politicas de privacidad</button> -->
+            <a href="/alu4635/avisoLegal.html">Politicas de Privacidad</a>
+        </div>
+      </div>
 		</div><!-- pie-->
 
   </body>

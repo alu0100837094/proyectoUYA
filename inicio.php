@@ -140,13 +140,16 @@ header("location: perfil.php");
 
     <div class="row" role="row">
       <div class="col-sm-4" >
-        <button type="button" class="btn btn-link">Ayuda</button>
+        <!-- <button type="button" class="btn btn-link">Ayuda</button> -->
+        <a href="/alu4635/ayuda.html">Ayuda</a>
       </div>
       <div class="col-sm-4" >
-        <button type="button" class="btn btn-link">Acerca de</button>
+        <!-- <button type="button" class="btn btn-link">Acerca de</button> -->
+          <a href="/alu4635/contacto.html">Contacto</a>
       </div>
       <div class="col-sm-4" >
-        <button type="button" class="btn btn-link">Politicas de privacidad</button>
+        <!-- <button type="button" class="btn btn-link">Politicas de privacidad</button> -->
+          <a href="/alu4635/avisoLegal.html">Politicas de Privacidad</a>
       </div>
     </div>
   </div><!-- pie-->
