@@ -1,6 +1,6 @@
 <?php
 include('session.php');
-echo"Entre a perfil.php";
+// echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -12,6 +12,7 @@ echo"Entre a perfil.php";
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
 		<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="publicar.js" ></script>
   </head>
   <body>
 	<div class="container">
@@ -38,11 +39,11 @@ echo"Entre a perfil.php";
                     <!-- Collection of nav links and other content for toggling -->
                     <div id="navbarCollapse" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Buscar</a></li>
-                            <li ><a href="#">Perfil</a></li>
-                            <li><a href="#">Mensajes</a></li>
-                            <li class="active"><a href="#">Publicar</a></li>
-                            <li><a href="#">Favoritos</a></li>
+                          <li><a href="/alu4635/busqu.php">Buscar</a></li>
+                          <li><a href="/alu4635/perfil.php">Perfil</a></li>
+                          <li><a href="/alu4635/messages.php">Mensajes</a></li>
+                          <li class="active"><a href="#">Publicar</a></li>
+                          <li><a href="/alu4635/favoritos.php">Favoritos</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
@@ -57,15 +58,15 @@ echo"Entre a perfil.php";
 		<div class="cuerpo">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<form class="form-horizontal">
+					<form id="form_publicar" class="form-horizontal">
 						<div class="form-group">
 							<br><br>
-							<label for="ejemplo_archivo_1">Adjuntar un archivo</label><br><br>
+							<label id="imagen_publicar" for="ejemplo_archivo_1">Adjuntar un archivo</label><br><br>
 							<input class="btn" type="file" id="ejemplo_archivo_1"><br>
 							<textarea class="form-control" placeholder="Añada una descripción" rows="3"></textarea>
 						</div><!--fin adjuntar archivo-->
 						<div class="form-group">
-							<label for="zona">Zona</label>
+							<label id="zona_publicar" for="zona">Zona</label>
 								<select class="form-control">
 									<option value="santa-cruz-de-tenerife">Santa Cruz de Tenerife</option>
 									<option value="la-laguna">La Laguna</option>
@@ -79,7 +80,7 @@ echo"Entre a perfil.php";
 								</select>
 						</div><!--fin zona-->
 						<div class="form-group">
-							<label for="dormi">Precio €</label>
+							<label id="precio_publicar" for="dormi">Precio €</label>
 								<select class="form-control">
 									<option>200</option>
 									<option>300</option>
@@ -89,7 +90,7 @@ echo"Entre a perfil.php";
 								</select>
 						</div><!--fin precio-->
 						<div class="form-group">
-							<label for="dormi">Dormitorios</label>
+							<label id="dormitorio_publicar" for="dormi">Dormitorios</label>
 								<select class="form-control">
 									<option>1</option>
 									<option>2</option>
@@ -99,7 +100,7 @@ echo"Entre a perfil.php";
 								</select>
 						 </div><!--fin dormitorios-->
 						 <div class="form-group">
-							<label for="banos">Baños</label>
+							<label id="banos_publicar" for="banos">Baños</label>
 								<select class="form-control">
 									<option>1</option>
 									<option>2</option>
@@ -109,7 +110,7 @@ echo"Entre a perfil.php";
 								</select>
 						</div><!--fin baños-->
 					</form>
-					<button type="button" class="btn btn-primary btn-lg">Publicar</button>
+					<button id="publicar" type="button" class="btn btn-primary btn-lg">Publicar</button>
 				</div><!--fin col-->
 			</div><!-- fin row-->
 		</div><!-- fin cuerpo-->
