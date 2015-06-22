@@ -1,13 +1,21 @@
 $(document).ready(function(){
 
  //$("#add_err").css('display', 'none', 'important');
-  $("#login").click(function(){
+  $("#publicar").click(function(){
    //debugger;
-    email=$("#email").val();
-    password=$("#password").val();
+    imagen=$("#imagen_publicar").val();
+    zona=$("#zona_publicar").val();
+    precio=$("#precio_publicar").val();
+    dormitorios=$("#dormitorio_publicar").val();
+    banos=$("#banos_publicar").val();
+    descripcion=$("#descripcion_publicar").val();
 		//alert(email);
-		if(email =='' || password ==''){
-			$("#add_err").html("<p>Llene ambos campos</p>");
+		if(zona =='' || precio =='' || dormitorios=='' || banos==''){
+			$("#add_err").html("<p>Llene los campos obligatorios campos</p>");
+      $("#form_zona").css("form-group has-error");
+      $("#form_precio").css("form-group has-error");
+      $("#form_dormitorio").css("form-group has-error");
+      $("#form_bano").css("form-group has-error");
 		}
 		else
 		{

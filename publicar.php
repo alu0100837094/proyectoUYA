@@ -63,11 +63,12 @@ include('session.php');
 							<br><br>
 							<label id="imagen_publicar" for="ejemplo_archivo_1">Adjuntar un archivo</label><br><br>
 							<input class="btn" type="file" id="ejemplo_archivo_1"><br>
-							<textarea class="form-control" placeholder="Añada una descripción" rows="3"></textarea>
+							<textarea id="descripcion_publicar" class="form-control" placeholder="Añada breve descripción de lo que desea publicar" rows="3"></textarea>
 						</div><!--fin adjuntar archivo-->
-						<div class="form-group">
+						<div id="form_zona" class="form-group">
 							<label id="zona_publicar" for="zona">Zona</label>
 								<select class="form-control">
+                  <option value=''>Seleccione la zona</option>
 									<option value="santa-cruz-de-tenerife">Santa Cruz de Tenerife</option>
 									<option value="la-laguna">La Laguna</option>
 									<option value="la-cuesta">La Cuesta</option>
@@ -79,9 +80,10 @@ include('session.php');
 									<option value="taco">Taco</option>
 								</select>
 						</div><!--fin zona-->
-						<div class="form-group">
+						<div id="form_precio" class="form-group">
 							<label id="precio_publicar" for="dormi">Precio €</label>
 								<select class="form-control">
+                  <option value=''>Seleccione el precio</option>
 									<option>200</option>
 									<option>300</option>
 									<option>400</option>
@@ -89,9 +91,10 @@ include('session.php');
 									<option>600</option>
 								</select>
 						</div><!--fin precio-->
-						<div class="form-group">
+						<div id="form_dormitorio" class="form-group">
 							<label id="dormitorio_publicar" for="dormi">Dormitorios</label>
 								<select class="form-control">
+                  <option value=''>Seleccione el número de dormitorios</option>
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -99,9 +102,10 @@ include('session.php');
 									<option>5</option>
 								</select>
 						 </div><!--fin dormitorios-->
-						 <div class="form-group">
+						 <div id="form_bano" class="form-group">
 							<label id="banos_publicar" for="banos">Baños</label>
 								<select class="form-control">
+                  <option value=''>Seleccione el número de baños</option>
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -111,6 +115,7 @@ include('session.php');
 						</div><!--fin baños-->
 					</form>
 					<button id="publicar" type="button" class="btn btn-primary btn-lg">Publicar</button>
+          <div class="err" id="add_err"></div>
 				</div><!--fin col-->
 			</div><!-- fin row-->
 		</div><!-- fin cuerpo-->
