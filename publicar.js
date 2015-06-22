@@ -11,17 +11,22 @@ $(document).ready(function(){
     descripcion=$("#descripcion_publicar").val();
 		//alert(email);
 		if(zona =='' || precio =='' || dormitorios=='' || banos==''){
-			$("#add_err").html("<p>Llene los campos obligatorios campos</p>");
-      $("#form_zona").css("form-group has-error");
-      $("#form_precio").css("form-group has-error");
-      $("#form_dormitorio").css("form-group has-error");
-      $("#form_bano").css("form-group has-error");
+			$("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  Campos obligatorios</p>");
+      $("#zona_publicar").html('<label id="zona_publicar" class="control-label" for="zona">Zona  *</label>');
+      $("#precio_publicar").html('<label id="precio_publicar" class="control-label" for="precio">Precio €  * </label>');
+      $("#dormitorio_publicar").html('<label id="dormitorio_publicar" class="control-label" for="dormi">Dormitorios</label>');
+      $("#banos_publicar").html('<label id="banos_publicar" class="control-label" for="banos">Baños  *</label>');
+
+      $("#form_zona").addClass("has-error");
+      $("#form_precio").addClass("has-error");
+      $("#form_dormitorio").addClass("has-error");
+      $("#form_bano").addClass("has-error has-feedback");
 		}
 		else
 		{
 			$.ajax({
       type: "POST",
-      url: "login.php",
+      url: "publica.php",
       data: "email="+email+"&password="+password,
       success: function(html){
 
