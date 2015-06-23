@@ -12,33 +12,6 @@ $dormitorios=$_POST['dormitorios'];
 $banos=$_POST['banos'];
 $descripcion=$_POST['descripcion'];
 echo "se asignaron las variables de forma correcta";
-
-if(empty($_FILE['imagen']) )
-{
-  echo "entre al if";
-
-  //Conectando a la base de datos
-  $connection = mysql_connect($servername, $username2, $password2,$dbname) or die("Could not connect database :" . mysql_error());
-
-
-  //Seleccionando la base de datos
-  $db = mysql_select_db($dbname, $connection) or die("no se pudo seleccionar la base de datos : " . mysql_error());
-
-  $contenido=NULL;
-  try
-  {
-  //$query=mysql_query("INSERT INTO PUBLICACION(foto) VALUES('$contenido') ",$connection) or die('Ingreso de publicacion fallido : ' . mysql_error());
-  $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,foto,precio,banho,habitaciones) VALUES('$descripcion','$zona','$contenido','$precio','$banos','$dormitorios') ",$connection) or throw new Exception("Ingreso de publicacion fallido", 1);
-  echo "true";
-
-
-  }catch(Exception $e)
-  {
-    echo "Error:  " .$e;
-  }
-}else
-{
-
   //imagen
   $imagen=$_FILES['imagen']['tmp_name'];//contenido del archivo
   $nomimagen=$_FILES['imagen']['name'];//nombre
@@ -62,14 +35,14 @@ if(empty($_FILE['imagen']) )
   try
   {
   //$query=mysql_query("INSERT INTO PUBLICACION(foto) VALUES('$contenido') ",$connection) or die('Ingreso de publicacion fallido : ' . mysql_error());
-  $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,foto,precio,banho,habitaciones) VALUES('$descripcion','$zona','$contenido','$precio','$banos','$dormitorios') ",$connection) or throw new Exception("Ingreso de publicacion fallido" .mysql_error(), 1);
+  $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,foto,precio,banho,habitaciones) VALUES ('$descripcion','$zona','$contenido','$precio','$banos','$dormitorios') ",$connection) or die("Ingreso de publicacion fallido" .mysql_error());
   echo "true";
 
   }catch(Exception $e)
   {
     echo "Error:  " .$e;
   }
-}
+
 
 mysql_close($connection); // Cerrando conexión
 
