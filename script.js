@@ -7,7 +7,7 @@ $(document).ready(function(){
     password=$("#password").val();
 		//alert(email);
 		if(email =='' || password ==''){
-			$("#add_err").html("<p>Llene ambos campos</p>");
+			$("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p>Llene ambos campos</p>");
 		}
 		else
 		{

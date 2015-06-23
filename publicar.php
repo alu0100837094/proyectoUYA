@@ -58,7 +58,7 @@ include('session.php');
 		<div class="cuerpo">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<form id="form_publicar" class="form-horizontal">
+					<form id="form_publicar" class="form-horizontal" enctype="multipart/form-data">
 						<div class="form-group">
 							<br><br>
 							<label id="imagen_publicar" for="ejemplo_archivo_1">Adjuntar un archivo</label><br><br>
@@ -94,7 +94,7 @@ include('session.php');
 						</div><!--fin precio-->
 						<div id="form_dormitorio" class="form-group">
 							<label id="dormitorio_publicar" class="control-label" for="dormi">Dormitorios</label>
-								<select id="dormi" class="form-control">
+								<select id="dormitorio" class="form-control">
                   <option value=''>Seleccione el número de dormitorios</option>
 									<option>1</option>
 									<option>2</option>
