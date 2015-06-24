@@ -1,4 +1,5 @@
 <?php
+include('session.php');
 echo "entre a publica.php";
 //Datos para conectarse a la base de datos
 $servername = "localhost";
@@ -32,16 +33,20 @@ echo "se asignaron las variables de forma correcta";
   $db = mysql_select_db($dbname, $connection) or die("no se pudo seleccionar la base de datos : " . mysql_error());
 
 
-  try
-  {
+  // try
+  // {
   //$query=mysql_query("INSERT INTO PUBLICACION(foto) VALUES('$contenido') ",$connection) or die('Ingreso de publicacion fallido : ' . mysql_error());
-  $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,foto,precio,banho,habitaciones) VALUES ('$descripcion','$zona','$contenido','$precio','$banos','$dormitorios') ",$connection) or die("Ingreso de publicacion fallido" .mysql_error());
+  $queryID=mysql_query("SELECT id FROM USUARIO WHERE email='$login_session'",$connection) or die("No se ha podido verificar el id del usuario" .mysql_error());
+  $row= mysql_num_rows($queryID);
+  echo "login_session" .$login_session;
+  echo "query ID :" .$row;
+  $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,foto,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$contenido','$precio','$banos','$dormitorios','$row') ",$connection) or die("Ingreso de publicacion fallido" .mysql_error());
   echo "true";
 
-  }catch(Exception $e)
-  {
-    echo "Error:  " .$e;
-  }
+  // }catch(Exception $e)
+  // {
+  //   echo "Error:  " .$e;
+  // }
 
 
 mysql_close($connection); // Cerrando conexión
