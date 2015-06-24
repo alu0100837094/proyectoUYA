@@ -61,8 +61,8 @@ include('session.php');
 					<form id="form_publicar" class="form-horizontal" enctype="multipart/form-data">
 						<div class="form-group">
 							<br><br>
-							<label id="imagen_publicar" for="ejemplo_archivo_1">Adjuntar un archivo</label><br><br>
-							<input class="btn" type="file" id="ejemplo_archivo_1"><br>
+							<label id="imagen_publicar" for="imagen">Adjuntar un archivo</label><br><br>
+							<input class="btn" type="file" id="imagen" name="imagen"><br>
               <label id="descripcion_publicar" class="control-label" for="descripcion">Descripción</label>
 							<textarea id="descripcion" class="form-control" placeholder="Añada breve descripción de lo que desea publicar" rows="3"></textarea>
 						</div><!--fin adjuntar archivo-->

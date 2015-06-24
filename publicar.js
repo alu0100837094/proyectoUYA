@@ -3,15 +3,21 @@ $(document).ready(function(){
  //$("#add_err").css('display', 'none', 'important');
   $("#publicar").click(function(){
    //debugger;
-    imagen=$("#ejemplo_archivo_1").val();
+   var data = new FormData();
+
+    data.append('imagen', $('#imagen'));
+    //data.append('file','#file');
+    imagen=$("#imagen").val();
     zona=$("#zona").val();
     precio=$("#precio").val();
     dormitorios=$("#dormitorio").val();
     banos=$("#banos").val();
     descripcion=$("#descripcion").val();
-    var data= "zona="+zona+"&precio="+precio+"&dormitorios="+dormitorios+"&banos="+banos+"&descripcion="+descripcion+"&imagen="+imagen;
+    datos= "zona="+zona+"&precio="+precio+"&dormitorios="+dormitorios+"&banos="+banos+"&descripcion="+descripcion+"&imagen="+data;
+
+		alert(datos);
     alert(data);
-		//alert(email);
+
 		if( zona == '' || precio == '' || dormitorios == '' || banos == '' ){
 			$("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  Campos obligatorios</p>");
       $("#zona_publicar").html('<label id="zona_publicar" class="control-label" for="zona">Zona  *</label>');
@@ -31,7 +37,10 @@ $(document).ready(function(){
 			$.ajax({
       type: "POST",
       url: "publica.php",
-      data: data,
+      data: datos,
+      //contentType: false,
+      //processData: false,
+
       success: function(html){
 
       alert("Entre al succes" +html);
@@ -48,6 +57,7 @@ $(document).ready(function(){
     $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
    }
      },
+
      error:function(jqXHR,exception)
      { if (jqXHR.status === 0) {
          alert('Not connected.\nPlease verify your network connection.');
