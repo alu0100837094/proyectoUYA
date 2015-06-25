@@ -55,7 +55,13 @@ $(document).ready(function(){
  				if(response.type == 'error'){ //load json data from server and output message
 					output = '<div class="error">'+response.text+'</div>';
 				}else{
+          if(response.type == 'suss'){
+
 				    output = '<div class="success">'+response.text+'</div>';
+
+          }else{
+            alert("error error error");
+          }
 				}
 				$("#contact_form #contact_results").hide().html(output).slideDown();
 

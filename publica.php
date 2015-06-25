@@ -12,6 +12,10 @@ $precio=$_POST['precio'];
 $dormitorios=$_POST['dormitorios'];
 $banos=$_POST['banos'];
 $descripcion=$_POST['descripcion'];
+//array de las extenciones permitidas para las imagenes
+$allowedExts = array("gif", "jpeg", "jpg", "png","GIF","JPEG","JPG","PNG");
+$temp = explode(".", $_FILES["imagen"]["name"]);
+$extension = end($temp);
 
 // $zona = filter_var($_POST["zona"], FILTER_SANITIZE_STRING);
 // $precio = filter_var($_POST["precio"], FILTER_SANITIZE_EMAIL);
@@ -35,12 +39,33 @@ $descripcion=$_POST['descripcion'];
 $file_attached = false;
 if(isset($_FILES['imagen'])) //check uploaded file
 {
+	if((($_FILES["imagen"]["type"] == "image/gif")
+	|| ($_FILES["imagen"]["type"] == "image/jpeg")
+	|| ($_FILES["imagen"]["type"] == "image/jpg")
+	|| ($_FILES["imagen"]["type"] == "image/pjpeg")
+	|| ($_FILES["imagen"]["type"] == "image/x-png")
+	|| ($_FILES["imagen"]["type"] == "image/png"))
+	&& in_array($extension, $allowedExts))
+	{
 	//get file details we need
 	$file_tmp_name 	= $_FILES['imagen']['tmp_name'];
 	$file_name 		  = $_FILES['imagen']['name'];
 	$file_size 		  = $_FILES['imagen']['size'];
 	$file_type 		  = $_FILES['imagen']['type'];
 	$file_error 	  = $_FILES['imagen']['error'];
+
+	//aqui se mueve el archivo a la carpeta destino
+	$target = "upload/";
+  // move_uploaded_file($_FILES["file"]["tmp_name"], $target. $_FILES["file"]["name"]);
+  // echo  "upload/" . $_FILES["file"]["name"];
+
+	move_uploaded_file($file_tmp_name, $target. $file_name);//hacer como hizo landy, con el id....
+  //echo  "upload/" . $file_name;//esta direccion es la que se deberia guardar en la base de datos?
+	$imagenurl= "upload/".$file_name;
+  // $output = json_encode(array('type'=>'suss','text'=>$target.$file_name));
+	// die($output);
+	$file_attached = true;
+  }
 
 	//exit script and output error if we encounter any
 	if($file_error>0)
@@ -57,12 +82,15 @@ if(isset($_FILES['imagen'])) //check uploaded file
 	}
 
 	//read from the uploaded file & base64_encode content for the mail
-	$handle = fopen($file_tmp_name, "r");
-	$content = fread($handle, $file_size);
-	fclose($handle);
-	$encoded_content = chunk_split(base64_encode($content));
+	//aqui se codifica el archivo
+	// $handle = fopen($file_tmp_name, "r");
+	// $content = fread($handle, $file_size);
+	// fclose($handle);
+	// $encoded_content = chunk_split(base64_encode($content));
 	//now we know we have the file for attachment, set $file_attached to true
-	$file_attached = true;
+
+
+
 }
 if($file_attached) //continue if we have the file
 {
@@ -83,8 +111,10 @@ $row= mysql_num_rows($queryID);
 // echo "login_session" .$login_session;
 //echo "query ID :" .$row;
 // echo "imagen : --> " .$encoded_content;
-$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,foto,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$encoded_content','$precio','$banos','$dormitorios','$row') ",$connection) or die("Ingreso de publicacion fallido" .mysql_error());
+$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$row') ",$connection) or die("Ingreso de publicacion fallido" .mysql_error());
 // echo "true";
+$id_pu="SELECT id_pu FROM PUBLICACION WHERE fk_pu='$row' ORDER BY DESC";
+$queryId_pu=mysql_query() or die("No se pudo obtener el ID de PUBLICACION" .mysql_error());
 $output = json_encode(array('type'=>'suss', 'text' => 'true'));
         die($output);
 }else
