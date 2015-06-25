@@ -3,20 +3,24 @@ $(document).ready(function(){
  //$("#add_err").css('display', 'none', 'important');
   $("#publicar").click(function(){
    //debugger;
-   var data = new FormData();
-
-    data.append('imagen', $('#imagen'));
+   var post_datos = new FormData();
+    post_datos.append('zona',$('select[name=zona]').val());
+    post_datos.append('precio',$('select[name=precio]').val());
+    post_datos.append('dormitorios',$('select[name=dormitorios]').val());
+    post_datos.append('banos',$('select[name=banos]').val());
+    post_datos.append('descripcion',$('textarea[name=descripcion]').val());
+    post_datos.append('imagen',$('input[name=imagen]')[0].files[0]);
     //data.append('file','#file');
-    imagen=$("#imagen").val();
-    zona=$("#zona").val();
-    precio=$("#precio").val();
-    dormitorios=$("#dormitorio").val();
-    banos=$("#banos").val();
-    descripcion=$("#descripcion").val();
-    datos= "zona="+zona+"&precio="+precio+"&dormitorios="+dormitorios+"&banos="+banos+"&descripcion="+descripcion+"&imagen="+data;
+    // imagen=$("#imagen").val();
+    // zona=$("#zona").val();
+    // precio=$("#precio").val();
+    // dormitorios=$("#dormitorio").val();
+    // banos=$("#banos").val();
+    // descripcion=$("#descripcion").val();
+    // datos= "zona="+zona+"&precio="+precio+"&dormitorios="+dormitorios+"&banos="+banos+"&descripcion="+descripcion+"&imagen="+data;
 
-		alert(datos);
-    alert(data);
+		// alert(datos);
+     alert(post_datos);
 
 		if( zona == '' || precio == '' || dormitorios == '' || banos == '' ){
 			$("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  Campos obligatorios</p>");
@@ -35,27 +39,37 @@ $(document).ready(function(){
 		else
 		{
 			$.ajax({
-      type: "POST",
-      url: "publica.php",
-      data: datos,
-      //contentType: false,
-      //processData: false,
+        url: "publica.php",
+        type: "POST",
+        data: post_datos,
+        processData: false,
+        contentType: false,
+        dataType:'json',
 
-      success: function(html){
 
-      alert("Entre al succes" +html);
+      success: function(response){
+
+      alert("Entre al succes" +response);
      //window.location="perfil.php";
+     //load json data from server and output message
+ 				if(response.type == 'error'){ //load json data from server and output message
+					output = '<div class="error">'+response.text+'</div>';
+				}else{
+				    output = '<div class="success">'+response.text+'</div>';
+				}
+				$("#contact_form #contact_results").hide().html(output).slideDown();
 
 
-   if(html=='true')    {
-    //$("#add_err").html("right username or password");
-    window.location="perfil.php";
-    //cambiar el cuerpo de la pagina por un mensaje que se publico con exito
-   }
-   else    {
-   $("#add_err").css('display', 'inline', 'important');
-    $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
-   }
+
+  //  if(html=='true')    {
+  //   //$("#add_err").html("right username or password");
+  //   window.location="perfil.php";
+  //   //cambiar el cuerpo de la pagina por un mensaje que se publico con exito
+  //  }
+  //  else    {
+  //  $("#add_err").css('display', 'inline', 'important');
+  //   $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
+  //  }
      },
 
      error:function(jqXHR,exception)
