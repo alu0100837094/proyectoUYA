@@ -96,7 +96,7 @@ if($file_attached) //continue if we have the file
 {
 
 //Conectando a la base de datos
-$connection = mysql_connect($servername, $username2, $password2,$dbname) or die("Could not connect database :" . mysql_error());
+$connection = mysql_connect($servername, $username2, $password2,$dbname) or die(json_encode(array('type'=> 'error','text'=>"Could not connect database :" . mysql_error());
 
 
 //Seleccionando la base de datos
@@ -106,21 +106,30 @@ $db = mysql_select_db($dbname, $connection) or die("no se pudo seleccionar la ba
 // try
 //
 //$query=mysql_query("INSERT INTO PUBLICACION(foto) VALUES('$contenido') ",$connection) or die('Ingreso de publicacion fallido : ' . mysql_error());
-$queryID=mysql_query("SELECT id FROM USUARIO WHERE email='$login_session'",$connection) or die("No se ha podido verificar el id del usuario" .mysql_error());
+$queryID=mysql_query("SELECT id FROM USUARIO WHERE email='$login_session'",$connection) or die(json_encode(array('type'=> 'error','text'=>"No se ha podido verificar el id del usuario" .mysql_error());
 $row= mysql_num_rows($queryID);
+
 // echo "login_session" .$login_session;
 //echo "query ID :" .$row;
 // echo "imagen : --> " .$encoded_content;
-$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$row') ",$connection) or die("Ingreso de publicacion fallido" .mysql_error());
+$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$row') ",$connection) or die(json_encode(array('type'=> 'error','text'=>"Ingreso de publicacion fallido" .mysql_error());
 // echo "true";
+
+
 $id_pu="SELECT id_pu FROM PUBLICACION WHERE fk_pu='$row' ORDER BY DESC";
-$queryId_pu=mysql_query() or die("No se pudo obtener el ID de PUBLICACION" .mysql_error());
+
+$queryId_pu=mysql_query($id_pu) or die("No se pudo obtener el ID de PUBLICACION" .mysql_error());
+$row2=mysql_fetch_array($queryId_pu);
+$num_id_pu=$row2[0];
+
+$queryFoto=mysql_query("INSERT INTO FOTO(url_foto,fk_fo) VALUES ('$imagenurl','$num_id_pu') ") or die (json_encode(array('type'=> 'error','text'=>"No se pudo ingresar la foto" .mysql_error());
+
 $output = json_encode(array('type'=>'suss', 'text' => 'true'));
         die($output);
 }else
 {
 // echo "false --->else del file_attach"
-$output = json_encode(array('type'=>'error', 'text' => 'Could not .'));
+$output = json_encode(array('type'=>'error', 'text' => 'Could not, just not .'));
         die($output);
 }
 // }catch(Exception $e)
