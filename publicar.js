@@ -11,11 +11,11 @@ $(document).ready(function(){
     post_datos.append('descripcion',$('textarea[name=descripcion]').val());
     post_datos.append('imagen',$('input[name=imagen]')[0].files[0]);
     //data.append('file','#file');
-    // imagen=$("#imagen").val();
-    // zona=$("#zona").val();
-    // precio=$("#precio").val();
-    // dormitorios=$("#dormitorio").val();
-    // banos=$("#banos").val();
+    //imagen=$("#imagen").val();
+    zona=$("#zona").val();
+    precio=$("#precio").val();
+    dormitorios=$("#dormitorio").val();
+    banos=$("#banos").val();
     // descripcion=$("#descripcion").val();
     // datos= "zona="+zona+"&precio="+precio+"&dormitorios="+dormitorios+"&banos="+banos+"&descripcion="+descripcion+"&imagen="+data;
 
@@ -52,18 +52,18 @@ $(document).ready(function(){
       alert("Entre al succes" +response);
      //window.location="perfil.php";
      //load json data from server and output message
- 				if(response.type == 'error'){ //load json data from server and output message
-					output = '<div class="error">'+response.text+'</div>';
+ 				if(response.type == 'error' || response.type == 'prueba'){ //load json data from server and output message
+           $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  ERROR : "+response.text+"</p>");
 				}else{
           if(response.type == 'suss'){
 
-				    output = '<div class="success">'+response.text+'</div>';
+				    $("#cuerpo").html("<div id='publicacionExitosa'><div id='regEx' class='text-center text-success'><h1><span class='glyphicon glyphicon-ok' aria-hidden='true'></span>  PUBLICACION REALIZADA CON EXITO </h1><h2>Pulse el boton para volver a Inicio</h2><a href='/alu4635/perfil.php'>Volver a Inicio &nbsp</a><a href='/alu4635/publicar.php'>&nbsp Realizar otra Publicación</a><br><br></div></div>");
 
           }else{
             alert("error error error");
           }
 				}
-				$("#contact_form #contact_results").hide().html(output).slideDown();
+				//$("#contact_form #contact_results").hide().html(output).slideDown();
 
 
 

@@ -16,7 +16,7 @@ $descripcion=$_POST['descripcion'];
 $allowedExts = array("gif", "jpeg", "jpg", "png","GIF","JPEG","JPG","PNG");
 $temp = explode(".", $_FILES["imagen"]["name"]);
 $extension = end($temp);
-
+$random_digit=rand(0000,9999);
 // $zona = filter_var($_POST["zona"], FILTER_SANITIZE_STRING);
 // $precio = filter_var($_POST["precio"], FILTER_SANITIZE_EMAIL);
 // $dormitorios = filter_var($_POST["dormitorios"], FILTER_SANITIZE_NUMBER_INT);
@@ -56,12 +56,13 @@ if(isset($_FILES['imagen'])) //check uploaded file
 
 	//aqui se mueve el archivo a la carpeta destino
 	$target = "upload/";
+	$new_name_image=$random_digit.$file_name;
+	$path=$target.$new_name_image;
   // move_uploaded_file($_FILES["file"]["tmp_name"], $target. $_FILES["file"]["name"]);
   // echo  "upload/" . $_FILES["file"]["name"];
 
-	move_uploaded_file($file_tmp_name, $target. $file_name);//hacer como hizo landy, con el id....
+	move_uploaded_file($file_tmp_name, $path);//hacer como hizo landy, con el id....
   //echo  "upload/" . $file_name;//esta direccion es la que se deberia guardar en la base de datos?
-	$imagenurl= "upload/".$file_name;
   // $output = json_encode(array('type'=>'suss','text'=>$target.$file_name));
 	// die($output);
 	$file_attached = true;
@@ -117,13 +118,13 @@ $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habita
 // echo "true";
 
 
-$id_pu="SELECT MAX(id_pu) FROM PUBLICACION WHERE fk_pu='$rowid'";
+$id_pu="SELECT id_pu FROM PUBLICACION WHERE fk_pu='$rowid' ORDER BY id_pu DESC";
 
 $queryId_pu=mysql_query($id_pu) or die(json_encode(array('type'=> 'error','text'=> "No se pudo obtener el ID de PUBLICACION" .mysql_error())));
 $row2=mysql_fetch_array($queryId_pu);
 $num_id_pu=$row2[id_pu];
-
-$queryFoto=mysql_query("INSERT INTO FOTO(url_foto,fk_fo) VALUES ('$imagenurl','$num_id_pu') ") or die (json_encode(array('type'=> 'error','text'=>"No se pudo ingresar la foto" .mysql_error())));
+$output = json_encode(array('type'=>'prueba', 'text' => 'id_pu -->' .$num_id_pu));
+$queryFoto=mysql_query("INSERT INTO FOTO(url_foto,fk_fo) VALUES ('$path','$num_id_pu') ") or die (json_encode(array('type'=> 'error','text'=>"No se pudo ingresar la foto" .mysql_error())));
 
 $output = json_encode(array('type'=>'suss', 'text' => 'true'));
         die($output);

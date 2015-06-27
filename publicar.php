@@ -55,7 +55,7 @@ include('session.php');
 				</div><!-- fin menu navegacion -->
 			</div><!-- fin row -->
 		</div><!--fin cabecera-->
-		<div class="cuerpo">
+		<div class="cuerpo" id="cuerpo">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
 					<form id="form_publicar" class="form-horizontal" enctype="multipart/form-data">
