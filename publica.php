@@ -130,8 +130,23 @@ $output = json_encode(array('type'=>'suss', 'text' => 'true'));
         die($output);
 }else
 {
+
+	//Conectando a la base de datos
+$connection = mysql_connect($servername, $username2, $password2,$dbname) or die(json_encode(array('type'=> 'error','text'=>"Could not connect database :" . mysql_error())));
+
+
+//Seleccionando la base de datos
+$db = mysql_select_db($dbname, $connection) or die(json_encode(array('type'=> 'error','text'=>"no se pudo seleccionar la base de datos : " . mysql_error())));
+
+$queryID=mysql_query("SELECT id FROM USUARIO WHERE email='$login_session'",$connection) or die(json_encode(array('type'=> 'error','text'=>"No se ha podido verificar el id del usuario" .mysql_error())));
+$row= mysql_fetch_array($queryID);
+$rowid=$row[id];
+
+$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$rowid') ",$connection) or die(json_encode(array('type'=> 'error','text'=>"Ingreso de publicacion fallido" .mysql_error())));
+
+	//aqui va la de ingresar sin foto
 // echo "false --->else del file_attach"
-$output = json_encode(array('type'=>'error', 'text' => 'Could not, just not .'));
+$output = json_encode(array('type'=>'suss', 'text' => 'true'));
         die($output);
 }
 // }catch(Exception $e)
