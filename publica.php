@@ -107,12 +107,13 @@ $db = mysql_select_db($dbname, $connection) or die(json_encode(array('type'=> 'e
 //
 //$query=mysql_query("INSERT INTO PUBLICACION(foto) VALUES('$contenido') ",$connection) or die('Ingreso de publicacion fallido : ' . mysql_error());
 $queryID=mysql_query("SELECT id FROM USUARIO WHERE email='$login_session'",$connection) or die(json_encode(array('type'=> 'error','text'=>"No se ha podido verificar el id del usuario" .mysql_error())));
-$row= mysql_num_rows($queryID);
+$row= mysql_fetch_array($queryID);
+$rowid=$row[id];
 
 // echo "login_session" .$login_session;
 //echo "query ID :" .$row;
 // echo "imagen : --> " .$encoded_content;
-$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$row') ",$connection) or die(json_encode(array('type'=> 'error','text'=>"Ingreso de publicacion fallido" .mysql_error())));
+$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$rowid') ",$connection) or die(json_encode(array('type'=> 'error','text'=>"Ingreso de publicacion fallido" .mysql_error())));
 // echo "true";
 
 
