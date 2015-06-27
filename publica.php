@@ -117,11 +117,11 @@ $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habita
 // echo "true";
 
 
-$id_pu="SELECT id_pu FROM PUBLICACION WHERE fk_pu='$row' ORDER BY DESC";
+$id_pu="SELECT MAX(id_pu) FROM PUBLICACION WHERE fk_pu='$rowid'";
 
 $queryId_pu=mysql_query($id_pu) or die(json_encode(array('type'=> 'error','text'=> "No se pudo obtener el ID de PUBLICACION" .mysql_error())));
 $row2=mysql_fetch_array($queryId_pu);
-$num_id_pu=$row2[0];
+$num_id_pu=$row2[id_pu];
 
 $queryFoto=mysql_query("INSERT INTO FOTO(url_foto,fk_fo) VALUES ('$imagenurl','$num_id_pu') ") or die (json_encode(array('type'=> 'error','text'=>"No se pudo ingresar la foto" .mysql_error())));
 
