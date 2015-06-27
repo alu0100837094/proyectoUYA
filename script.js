@@ -17,15 +17,17 @@ $(document).ready(function(){
       data: "email="+email+"&password="+password,
       success: function(html){
 
-      alert("Entre al succes"+html);
+      alert("Entre al succes-->  "+html);
      //window.location="perfil.php";
+      alert(html);
 
-
-   if(html=='true')    {
+   if(html=='true')
+   {
     //$("#add_err").html("right username or password");
     window.location="perfil.php";
    }
-   else    {
+   else
+   {
    $("#add_err").css('display', 'inline', 'important');
     $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
    }
