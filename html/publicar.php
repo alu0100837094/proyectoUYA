@@ -1,5 +1,5 @@
 <?php
-include('/php/session.php');
+include('../php/session.php');
 // echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
@@ -12,7 +12,7 @@ include('/php/session.php');
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 		<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" src="js/publicar.js" ></script>
+    <script type="text/javascript" src="/alu4635/js/publicar.js" ></script>
   </head>
   <body>
 	<div class="container">

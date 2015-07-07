@@ -1,5 +1,5 @@
 <?php
-include('/php/session.php');
+include('../php/session.php');
 //echo "entre a publica.php";
 //Datos para conectarse a la base de datos
 $servername = "localhost";
@@ -147,7 +147,7 @@ $query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habita
 	//aqui va la de ingresar sin foto
 // echo "false --->else del file_attach"
 $output = json_encode(array('type'=>'suss', 'text' => 'true'));
-        die($output);
+      	die($output);
 }
 // }catch(Exception $e)
 // {

@@ -13,7 +13,7 @@ $(document).ready(function(){
 		{
 			$.ajax({
       type: "POST",
-      url: "/php/login.php",
+      url: "/alu4635/php/login.php",
       data: "email="+email+"&password="+password,
       success: function(html){
 
@@ -24,7 +24,7 @@ $(document).ready(function(){
    if(html=='true')
    {
     //$("#add_err").html("right username or password");
-    window.location="/html/perfil.php";
+    window.location="/alu4635/html/perfil.php";
    }
    else
    {
@@ -68,7 +68,7 @@ $(document).ready(function(){
    {
      $.ajax({
      type: "POST",
-     url: "/php/registro.php",
+     url: "/alu4635//php/registro.php",
      data: data,
      //dataType: "json",
      //data: "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2,

@@ -39,7 +39,7 @@ $(document).ready(function(){
 		else
 		{
 			$.ajax({
-        url: "/php/publica.php",
+        url: "/alu4635/php/publica.php",
         type: "POST",
         data: post_datos,
         processData: false,

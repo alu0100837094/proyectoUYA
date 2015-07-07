@@ -8,7 +8,7 @@ $(document).ready(function(){
 	 alert(todos);
 	 $.ajax({
 	    type: "POST",
-	    url: "/php/buscar_bdd.php",
+	    url: "/alu4635/php/buscar_bdd.php",
 	    data: todos,
 	    success: function(html){
   	     alert(html);
