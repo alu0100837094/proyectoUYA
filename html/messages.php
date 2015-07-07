@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+include('/php/session.php');
 echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
@@ -10,9 +10,9 @@ echo"Entre a perfil.php";
 		<title>Mensajes</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/alu4635/bootstrap-3.3.4/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+		<script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 		<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
   </head>
   <body>

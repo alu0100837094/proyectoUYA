@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+include('/php/session.php');
 echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
@@ -10,9 +10,9 @@ echo"Entre a perfil.php";
     <title>Busqueda</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/alu4635/bootstrap-3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/buscar_bdd.js" ></script>
 	<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
   </head>
@@ -42,14 +42,14 @@ echo"Entre a perfil.php";
                   <div id="navbarCollapse" class="collapse navbar-collapse">
                       <ul class="nav navbar-nav">
                           <li class="active"><a href="#">Buscar</a></li>
-                          <li><a href="/alu4635/perfil.php">Perfil</a></li>
-                          <li><a href="/alu4635/messages.php">Mensajes</a></li>
-                          <li><a href="/alu4635/publicar.php">Publicar</a></li>
-                          <li><a href="/alu4635/favoritos.php">Favoritos</a></li>
+                          <li><a href="/alu4635/html/perfil.php">Perfil</a></li>
+                          <li><a href="/alu4635/html/messages.php">Mensajes</a></li>
+                          <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
+                          <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
                       </ul>
                       <ul class="nav navbar-nav navbar-right">
                           <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
-                          <li><a href="/alu4635/logout.php">Cerra sesión</a></li>
+                          <li><a href="/alu4635/php/logout.php">Cerra sesión</a></li>
                       </ul>
                   </div>
           </div>
@@ -134,15 +134,15 @@ echo"Entre a perfil.php";
         <div class="row" role="row">
           <div class="col-sm-4" >
             <!-- <button type="button" class="btn btn-link">Ayuda</button> -->
-            <a href="/alu4635/ayuda.html">Ayuda</a>
+            <a href="/alu4635/html/ayuda.html">Ayuda</a>
           </div>
           <div class="col-sm-4" >
             <!-- <button type="button" class="btn btn-link">Acerca de</button> -->
-              <a href="/alu4635/contacto.html">Contacto</a>
+              <a href="/alu4635/html/contacto.html">Contacto</a>
           </div>
           <div class="col-sm-4" >
             <!-- <button type="button" class="btn btn-link">Politicas de privacidad</button> -->
-              <a href="/alu4635/avisoLegal.html">Politicas de Privacidad</a>
+              <a href="/alu4635/html/avisoLegal.html">Politicas de Privacidad</a>
           </div>
         </div>
 	   </div><!--fin pie-->

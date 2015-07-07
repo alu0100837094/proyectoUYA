@@ -21,6 +21,6 @@ $login_session =$row['email'];
 $id_session=$row['id'];
 if(!isset($login_session)){
 mysqli_close($connection); // Closing Connection
-header('Location: inicio.php'); // Redirecting To Home Page
+header('Location: /html/inicio.php'); // Redirecting To Home Page
 }
 ?>

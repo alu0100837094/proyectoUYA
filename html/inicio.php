@@ -2,7 +2,7 @@
 //include('login.php'); // Includes Login Script
 
 if(isset($_SESSION['login_user'])){
-header("location: perfil.php");
+header("location: /html/perfil.php");
 }
 ?>
 <!DOCTYPE html>
@@ -11,10 +11,10 @@ header("location: perfil.php");
     <title>Buscando piso, tu mejor opción</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/alu4635/bootstrap-3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/script.js" ></script>
+    <script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/alu4635/js/script.js" ></script>
 
   </head>
   <body>
@@ -141,15 +141,15 @@ header("location: perfil.php");
     <div class="row" role="row">
       <div class="col-sm-4" >
         <!-- <button type="button" class="btn btn-link">Ayuda</button> -->
-        <a href="/alu4635/ayuda.html">Ayuda</a>
+        <a href="/alu4635/html/ayuda.html">Ayuda</a>
       </div>
       <div class="col-sm-4" >
         <!-- <button type="button" class="btn btn-link">Acerca de</button> -->
-          <a href="/alu4635/contacto.html">Contacto</a>
+          <a href="/alu4635/html/contacto.html">Contacto</a>
       </div>
       <div class="col-sm-4" >
         <!-- <button type="button" class="btn btn-link">Politicas de privacidad</button> -->
-          <a href="/alu4635/avisoLegal.html">Politicas de Privacidad</a>
+          <a href="/alu4635/html/avisoLegal.html">Politicas de Privacidad</a>
       </div>
     </div>
   </div><!-- pie-->

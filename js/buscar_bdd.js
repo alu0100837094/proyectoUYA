@@ -8,12 +8,12 @@ $(document).ready(function(){
 	 alert(todos);
 	 $.ajax({
 	    type: "POST",
-	    url: "buscar_bdd.php",
+	    url: "/php/buscar_bdd.php",
 	    data: todos,
 	    success: function(html){
   	     alert(html);
 	 $("#respuesta").html(html);
-	
+
 },
 
 

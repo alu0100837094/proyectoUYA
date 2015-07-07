@@ -7,13 +7,13 @@ $(document).ready(function(){
     password=$("#password").val();
 		//alert(email);
 		if(email =='' || password ==''){
-			$("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p>Llene ambos campos</p>");
+			$("#add_err").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p>Llene ambos campos</p>");
 		}
 		else
 		{
 			$.ajax({
       type: "POST",
-      url: "login.php",
+      url: "/php/login.php",
       data: "email="+email+"&password="+password,
       success: function(html){
 
@@ -24,12 +24,12 @@ $(document).ready(function(){
    if(html=='true')
    {
     //$("#add_err").html("right username or password");
-    window.location="perfil.php";
+    window.location="/html/perfil.php";
    }
    else
    {
    $("#add_err").css('display', 'inline', 'important');
-    $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
+    $("#add_err").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
    }
      },
      error:function(){
@@ -62,13 +62,13 @@ $(document).ready(function(){
    alert("Esta mandando esto : "+nombre+apellidos+emailR+passwordR2+passwordR);
 
    if(emailR =='' || passwordR =='' || apellidos == '' || nombre == '' || passwordR2 == ''){
-     $("#add_errR").html("<p>Llene todos los campos</p>");
+     $("#add_errR").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50'/><p>Llene todos los campos</p>");
    }
    else
    {
      $.ajax({
      type: "POST",
-     url: "registro.php",
+     url: "/php/registro.php",
      data: data,
      //dataType: "json",
      //data: "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2,
@@ -81,11 +81,11 @@ $(document).ready(function(){
 
   if(html=='true')    {
 
-   window.location="registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
+   window.location="/html/registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
   }
   else    {
   $("#add_errR").css('display', 'inline', 'important');
-   $("#add_errR").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50'/>Correo electrónico ya está registrado");
+   $("#add_errR").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50'/>Correo electrónico ya está registrado");
   }
     },
     error:function(jqXHR,exception)

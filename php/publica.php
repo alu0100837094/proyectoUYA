@@ -1,5 +1,5 @@
 <?php
-include('session.php');
+include('/php/session.php');
 //echo "entre a publica.php";
 //Datos para conectarse a la base de datos
 $servername = "localhost";
@@ -55,7 +55,7 @@ if(isset($_FILES['imagen'])) //check uploaded file
 	$file_error 	  = $_FILES['imagen']['error'];
 
 	//aqui se mueve el archivo a la carpeta destino
-	$target = "upload/";
+	$target = "/alu4635/upload/";
 	$new_name_image=$random_digit.$file_name;
 	$path=$target.$new_name_image;
   // move_uploaded_file($_FILES["file"]["tmp_name"], $target. $_FILES["file"]["name"]);

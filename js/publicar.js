@@ -23,7 +23,7 @@ $(document).ready(function(){
      alert(post_datos);
 
 		if( zona == '' || precio == '' || dormitorios == '' || banos == '' ){
-			$("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  Campos obligatorios</p>");
+			$("#add_err").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  Campos obligatorios</p>");
       $("#zona_publicar").html('<label id="zona_publicar" class="control-label" for="zona">Zona  *</label>');
       $("#precio_publicar").html('<label id="precio_publicar" class="control-label" for="precio">Precio €  * </label>');
       $("#dormitorio_publicar").html('<label id="dormitorio_publicar" class="control-label" for="dormi">Dormitorios</label>');
@@ -39,7 +39,7 @@ $(document).ready(function(){
 		else
 		{
 			$.ajax({
-        url: "publica.php",
+        url: "/php/publica.php",
         type: "POST",
         data: post_datos,
         processData: false,
@@ -53,11 +53,11 @@ $(document).ready(function(){
      //window.location="perfil.php";
      //load json data from server and output message
  				if(response.type == 'error' || response.type == 'prueba'){ //load json data from server and output message
-           $("#add_err").html("<img src='images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  ERROR : "+response.text+"</p>");
+           $("#add_err").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  ERROR : "+response.text+"</p>");
 				}else{
           if(response.type == 'suss'){
 
-				    $("#cuerpo").html("<div id='publicacionExitosa'><div id='regEx' class='text-center text-success'><h1><span class='glyphicon glyphicon-ok' aria-hidden='true'></span>  PUBLICACION REALIZADA CON EXITO </h1><h2>Pulse el boton para volver a Inicio</h2><a href='/alu4635/perfil.php'>Volver a Inicio &nbsp</a><a href='/alu4635/publicar.php'>&nbsp Realizar otra Publicación</a><br><br></div></div>");
+				    $("#cuerpo").html("<div id='publicacionExitosa'><div id='regEx' class='text-center text-success'><h1><span class='glyphicon glyphicon-ok' aria-hidden='true'></span>  PUBLICACION REALIZADA CON EXITO </h1><h2>Pulse el boton para volver a Inicio</h2><a href='/alu4635/html/perfil.php'>Volver a Inicio &nbsp</a><a href='/alu4635/html/publicar.php'>&nbsp Realizar otra Publicación</a><br><br></div></div>");
 
           }else{
             alert("error error error");
