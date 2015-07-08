@@ -12,14 +12,19 @@ document.body.onload = function() {novedades()};
 
       success: function(response)
       {
-        // var length = Object.keys(response).length;
-        // alert('dentro del success'+response[0].id_pu);
+        var length = Object.keys(response.novedad).length;
+        // alert('dentro del success     '+response.novedad[0].id_pu);
+        // alert('dentro del success     '+response.novedad[1].id_pu);
+        // alert('dentro del success     '+response.novedad[2].id_pu);
+        // alert('dentro del success     '+response.novedad[3].id_pu);
+        // alert('dentro del success     '+response.novedad[4].id_pu);
+        // alert('dentro del success     '+response.novedad[5].id_pu);
         // alert('dentro del success'+response[1].id_pu);
         // alert('dentro del success'+response[2].id_pu);
         // alert('dentro del success'+response[3].id_pu);
         // alert('dentro del success'+response[4].id_pu);
         // alert('dentro del success'+response[0].);
-        // alert('dentro del success'+length);
+        alert('tamaño del json   '+length);
 
 
 
@@ -39,20 +44,21 @@ document.body.onload = function() {novedades()};
 
         if(response.type=='suss')
         {
-            for(var i in response)
+            for(i=0; i<length;i++)
             {
-              var idCada="novedades_"+response[i].id_pu;
-              var numeroID=response[i].id_pu;
-              var zona=response[i].zona;
-              var habitaciones=response[i].habitaciones;
-              var banos=response[i].banho;
-              var precio=response[i].precio;
-              var desc=response[i].descripcion;
+              var idCada="novedades_"+response.novedad[i].id_pu;
+              var numeroID=response.novedad[i].id_pu;
+              var zona=response.novedad[i].zona;
+              var habitaciones=response.novedad[i].habitaciones;
+              var banos=response.novedad[i].banho;
+              var precio=response.novedad[i].precio;
+              var desc=response.novedad[i].descripcion;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
               var novedadesN ="<tr><td style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td></tr>";
 
 
               $("#tablaNovedades").append(novedadesN);
+
             }
         }else{
           var novedadesNo="No hay novedades";

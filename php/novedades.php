@@ -22,7 +22,7 @@ if($novedades)
   $jsondata['type']='suss';
   while($row=mysql_fetch_assoc($novedades))
   {
-    $jsondata[$i]=$row;
+    $jsondata["novedad"][$i]=$row;
     $i++;
 
   }
