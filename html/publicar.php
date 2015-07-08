@@ -70,15 +70,15 @@ include('../php/session.php');
 							<label id="zona_publicar" class="control-label" for="zona">Zona</label>
 								<select id="zona" name="zona" class="form-control">
                   <option value=''>Seleccione la zona</option>
-									<option value="santa-cruz-de-tenerife">Santa Cruz de Tenerife</option>
-									<option value="la-laguna">La Laguna</option>
-									<option value="la-cuesta">La Cuesta</option>
-									<option value="las-chumberas">Las Chumberas</option>
-									<option value="finca-espana">Finca España</option>
-									<option value="genetp">Geneto</option>
-									<option value="gracia">Gracia</option>
-									<option value="guajara">Guajara</option>
-									<option value="taco">Taco</option>
+									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+									<option value="La Laguna">La Laguna</option>
+									<option value="La Cuesta">La Cuesta</option>
+									<option value="Las Chumberas">Las Chumberas</option>
+									<option value="Finca España">Finca España</option>
+									<option value="Geneto">Geneto</option>
+									<option value="Gracia">Gracia</option>
+									<option value="Guajara">Guajara</option>
+									<option value="Taco">Taco</option>
 								</select>
 						</div><!--fin zona-->
 						<div id="form_precio" class="form-group">
