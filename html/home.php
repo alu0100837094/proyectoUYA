@@ -68,7 +68,20 @@ include('../php/session.php');
   				<div class="col-sm-12">
   					<h1>Inicio</h1>
             <h2>Ultimas Publicaciones </h2>
-              <div id="publicaciones"></div>
+              <div id="publicaciones">
+
+              <!-- Aquí van los resultados de la consulta  -->
+              <table id="tablaNovedades">
+                <tr>
+                  <th style="visibility:hidden;">id</th>
+                  <th>Zona</th>
+                  <th>Habitaciones</th>
+                  <th>Ba&ntildeo</th>
+                </tr>
+              </table>
+
+
+              </div>
   				</div><!-- fin col-->
   			</div><!--fin row-->
   		</div><!-- fin cuerpo-->
