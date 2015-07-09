@@ -114,7 +114,7 @@ $rowid=$row[id];
 // echo "login_session" .$login_session;
 //echo "query ID :" .$row;
 // echo "imagen : --> " .$encoded_content;
-$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$rowid') ",$connection) or die(json_encode(array('type'=> 'error','text'=>"Ingreso de publicacion fallido" .mysql_error())));
+$query=mysql_query("INSERT INTO PUBLICACION(descripcion,zona,precio,banho,habitaciones,fk_pu,foto) VALUES ('$descripcion','$zona','$precio','$banos','$dormitorios','$rowid','$path') ",$connection) or die(json_encode(array('type'=> 'error','text'=>"Ingreso de publicacion fallido" .mysql_error())));
 // echo "true";
 
 

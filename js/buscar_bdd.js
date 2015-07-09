@@ -17,10 +17,12 @@ $(document).ready(function(){
 
   	     if(response.type=='suss')
          {
+           $("td").remove();
            var length = Object.keys(response.busqueda).length;
            for(i=0; i<length;i++)
            {
              var idCada="'"+response.busqueda[i].id_pu+"'";
+             var foto=response.urlFoto;
              var numeroID=response.busqueda[i].id_pu;
              var zona=response.busqueda[i].zona;
              var habitaciones=response.busqueda[i].habitaciones;
@@ -28,7 +30,8 @@ $(document).ready(function(){
              var precio=response.busqueda[i].precio;
              var desc=response.busqueda[i].descripcion;
              // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
-             var busqueda ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td></tr>";
+             var busqueda ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td>"+foto+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td></tr>";
+
               $('#nohayRes').css("visibility","hidden");
               $("#tablaRespuesta").css("visibility","visible");
               $("#tablaRespuesta").append(busqueda);
@@ -36,7 +39,8 @@ $(document).ready(function(){
            }
          }else
          {
-           $("#tablaRespuesta").css("visibility","hidden");
+           $('#tablaRespuesta').css("visibility","hidden");
+           $("td").remove();
            $('#nohayRes').css("visibility","visible");
          }
 

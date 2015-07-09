@@ -135,7 +135,7 @@ echo"Entre a perfil.php";
           <th>Zona</th>
           <th>Habitaciones</th>
           <th>Ba&ntildeo</th>
-          <th>Más Detalles</th>
+          <th>Descripción</th>
           <th>Contactar</th>
         </tr>
       </table>
