@@ -54,7 +54,9 @@ document.body.onload = function() {novedades()};
               var precio=response.novedad[i].precio;
               var desc=response.novedad[i].descripcion;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
-              var novedadesN ="<tr><td style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td></tr>";
+              var botonVer="<button type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
+              var botonCon="<button type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
+              var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
 
 
               $("#tablaNovedades").append(novedadesN);
@@ -104,7 +106,13 @@ document.body.onload = function() {novedades()};
 
 
 
-
+  $("#tablaNovedades tr td div").bind('keydown', function(event) {
+    if(event.keyCode == 9){ //for tab key
+      var currentDiv = event.target;
+      $(currentDiv).parents("td").next("td").find("div").click();
+      return false; // <== here
+    }
+  });
 
 
 

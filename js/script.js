@@ -24,7 +24,7 @@ $(document).ready(function(){
    if(html=='true')
    {
     //$("#add_err").html("right username or password");
-    window.location="/alu4635/html/perfil.php";
+    window.location="/alu4635/html/home.php";
    }
    else
    {

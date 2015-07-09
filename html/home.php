@@ -33,14 +33,14 @@ include('../php/session.php');
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                           </button>
-                          <a href="#" class="navbar-brand">BuscandoPiso.com</a>
+                          <a href="/alu4635/html/home.php" class="navbar-brand">BuscandoPiso.com</a>
                       </div>
                       <!-- Collection of nav links and other content for toggling -->
                       <div id="navbarCollapse" class="collapse navbar-collapse">
                           <ul class="nav navbar-nav">
+                              <li class="active"><a href="/alu4635/html/home.php">Inicio</a></li>
                               <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
-                              <li class="active"><a href="#">Perfil</a></li>
-                              <li><a href="/alu4635/html/messages.php">Mensajes</a></li>
+                              <li><a href="/alu4635/html/perfil.php">Perfil</a></li>
                               <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
                               <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
                           </ul>
@@ -63,20 +63,22 @@ include('../php/session.php');
 
   			</div><!-- fin row -->
   		</div><!--fin cabecera-->
-  		<div class="cuerpo">
+  		<div data-role="page" class="cuerpo">
   			<div class="row" role="rowgroup">
   				<div class="col-sm-12">
   					<h1>Inicio</h1>
             <h2>Ultimas Publicaciones </h2>
-              <div id="publicaciones">
+              <div data-role="main" class="ui-content" id="publicaciones">
 
               <!-- Aquí van los resultados de la consulta  -->
-              <table id="tablaNovedades">
+              <table data-role="table" data-mode="columntoggle" class='table table-hover ui-responsive table-responsive table-striped' id="tablaNovedades">
                 <tr>
-                  <th style="visibility:hidden;">id</th>
+                  <th class="hidden-xs" style="visibility:hidden;">id</th>
                   <th>Zona</th>
                   <th>Habitaciones</th>
                   <th>Ba&ntildeo</th>
+                  <th>Más Detalles</th>
+                  <th>Contactar</th>
                 </tr>
               </table>
 

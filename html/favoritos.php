@@ -31,16 +31,16 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="#" class="navbar-brand">BuscandoPiso.com</a>
+                        <a href="/alu4635/html/home.php" class="navbar-brand">BuscandoPiso.com</a>
                     </div>
                     <!-- Collection of nav links and other content for toggling -->
                     <div id="navbarCollapse" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="#">Buscar</a></li>
+                            <li><a href="/alu4635/html/home.php">Inicio</a></li>
+                            <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
                             <li><a href="/alu4635/html/perfil.php">Perfil</a></li>
-                            <li><a href="/alu4635/html/messages.php">Mensajes</a></li>
                             <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
-                            <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
+                            <li class="active"><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
