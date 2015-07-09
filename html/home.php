@@ -84,6 +84,8 @@ include('../php/session.php');
 
 
               </div>
+              <div id="verNovedad"></div>
+              <div id="verImagen"></div>
   				</div><!-- fin col-->
   			</div><!--fin row-->
   		</div><!-- fin cuerpo-->

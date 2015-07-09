@@ -12,6 +12,7 @@ $connection = mysql_connect($servername, $username2, $password2,$dbname) or die(
 //Seleccionando la base de datos
 $db = mysql_select_db($dbname, $connection) or die(json_encode(array('type'=> 'error','text'=>"no se pudo seleccionar la base de datos : " . mysql_error())));
 
+//------------------------------------------------
 $query ="SELECT * FROM PUBLICACION ORDER BY id_pu DESC LIMIT 5";
 $novedades=mysql_query($query) or die(json_encode(array('type'=> 'error','text'=>"Error al hacer consulta" .mysql_error())));;
 

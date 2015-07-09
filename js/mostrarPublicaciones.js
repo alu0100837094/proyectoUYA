@@ -13,21 +13,6 @@ document.body.onload = function() {novedades()};
       success: function(response)
       {
         var length = Object.keys(response.novedad).length;
-        // alert('dentro del success     '+response.novedad[0].id_pu);
-        // alert('dentro del success     '+response.novedad[1].id_pu);
-        // alert('dentro del success     '+response.novedad[2].id_pu);
-        // alert('dentro del success     '+response.novedad[3].id_pu);
-        // alert('dentro del success     '+response.novedad[4].id_pu);
-        // alert('dentro del success     '+response.novedad[5].id_pu);
-        // alert('dentro del success'+response[1].id_pu);
-        // alert('dentro del success'+response[2].id_pu);
-        // alert('dentro del success'+response[3].id_pu);
-        // alert('dentro del success'+response[4].id_pu);
-        // alert('dentro del success'+response[0].);
-        alert('tamaño del json   '+length);
-
-
-
         // +-------+-------+-------------+--------------+--------+-------+--------------+
         // | id_pu | fk_pu | descripcion | zona         | precio | banho | habitaciones |
         // +-------+-------+-------------+--------------+--------+-------+--------------+
@@ -37,7 +22,7 @@ document.body.onload = function() {novedades()};
         // |    75 |     4 | kkkkkk      | la-cuesta    |    500 |     2 |            2 |
         // +-------+-------+-------------+--------------+--------+-------+--------------+
         // if(response.type=='suss')
-        // {
+        //
         //
 
         //Aqui empieza a ponerse todo el json con un for
@@ -46,7 +31,7 @@ document.body.onload = function() {novedades()};
         {
             for(i=0; i<length;i++)
             {
-              var idCada="novedades_"+response.novedad[i].id_pu;
+              var idCada="'"+response.novedad[i].id_pu+"'";
               var numeroID=response.novedad[i].id_pu;
               var zona=response.novedad[i].zona;
               var habitaciones=response.novedad[i].habitaciones;
@@ -54,9 +39,9 @@ document.body.onload = function() {novedades()};
               var precio=response.novedad[i].precio;
               var desc=response.novedad[i].descripcion;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
-              var botonVer="<button type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
-              var botonCon="<button type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
-              var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
+              var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
+              var botonCon="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
+              var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' data-descripcion="+desc+" data-precio="+precio+">"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
 
 
               $("#tablaNovedades").append(novedadesN);
@@ -93,26 +78,26 @@ document.body.onload = function() {novedades()};
 
   }//cerrar novedades
 
-  // Object.size = function(obj)
-  // {
-  //   var size = 0, key;
-  //   for (key in obj) {
-  //       if (obj.hasOwnProperty(key)) size++;
-  //   }
-  //   return size;
-  // };
-
-  // document.getElementById("demo").innerHTML =Object.size(employees);
 
 
-
-  $("#tablaNovedades tr td div").bind('keydown', function(event) {
-    if(event.keyCode == 9){ //for tab key
+  $("#tablaNovedades tr td div").bind('keydown', function(event)
+  {
+    if(event.keyCode == 9)
+    { //for tab key
       var currentDiv = event.target;
       $(currentDiv).parents("td").next("td").find("div").click();
       return false; // <== here
     }
   });
+
+  $("button").click(function()
+  {
+    $('td').html(   'Descripción : ' + $(this).attr('data-descripcion') + '    |     Precio : ' +  $(this).attr('data-precio')   );
+    $('#show_img').html("<img src="+$(this).attr('data-imagen')+"></img>");
+
+  });
+
+
 
 
 

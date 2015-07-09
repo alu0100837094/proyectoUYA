@@ -65,7 +65,7 @@ echo"Entre a perfil.php";
 						<div class="form-group">
 							<label id="Zona"for="zona">Zona</label>
 								<select name="zona_buscar" class="form-control">
-									<option value="*" role="option">Todos</option>
+									<option value=".*" role="option">Todos</option>
                   <option value=''>Seleccione la zona</option>
 									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
 									<option value="La Laguna">La Laguna</option>
@@ -81,29 +81,27 @@ echo"Entre a perfil.php";
 						   <div class="form-group">
 								<label id="Precio" for="dormi">Precio</label>
 									<select name="precio_buscar_d" class="form-control">
-										<optionvalue="*" role="option">Desde €</option>
+										<option value="" role="option">Desde €</option>
 										<option>200</option>
 										<option>300</option>
 										<option>400</option>
 										<option>500</option>
 										<option>600</option>
-										<option value="*" role="option">Todos</option>
 									</select>
 									<select name="precio_buscar_h" class="form-control">
-										<option value="*" role="option">Hasta €</option>
+										<option value="" role="option">Hasta €</option>
 										<option>300</option>
 										<option>400</option>
 										<option>500</option>
 										<option>600</option>
 										<option>700</option>
-										<option value="*" role="option">Todos</option>
 
 									</select>
 						   </div>
 						   <div class="form-group">
 								<label id ="Dormitorios" for="dormi">Dormitorios</label>
 									<select name="dormitorios"  class="form-control">
-										<option value="*" role="option">Todos</option>
+										<option value=".*" role="option">Todos</option>
 										<option>1</option>
 										<option>2</option>
 										<option>3</option>
@@ -114,7 +112,7 @@ echo"Entre a perfil.php";
 						   <div class="form-group">
 								<label id ="Banos" for="banos">Baños</label>
 								<select name="banos"  class="form-control">
-									<option value="*" role="option">Todos</option>
+									<option value=".*" role="option">Todos</option>
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
