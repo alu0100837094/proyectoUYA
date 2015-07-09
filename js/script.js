@@ -68,7 +68,7 @@ $(document).ready(function(){
    {
      $.ajax({
      type: "POST",
-     url: "/alu4635//php/registro.php",
+     url: "/alu4635/php/registro.php",
      data: data,
      //dataType: "json",
      //data: "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2,
@@ -81,7 +81,7 @@ $(document).ready(function(){
 
   if(html=='true')    {
 
-   window.location="/html/registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
+   window.location="alu4635/html/registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
   }
   else    {
   $("#add_errR").css('display', 'inline', 'important');

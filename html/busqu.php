@@ -60,8 +60,8 @@ echo"Entre a perfil.php";
 	<br><br><br>
       <div class="cuerpo">
 			<div class="row" role="rowgroup">
-				<div class="col-sm-12">
-					<form id="form_buscar"class="form-inline">
+				<div class="col-sm-12 col-centered">
+					<form id="form_buscar"class="form-inline center-block">
 						<div class="form-group">
 							<label id="Zona"for="zona">Zona</label>
 								<select name="zona_buscar" class="form-control">
@@ -120,12 +120,32 @@ echo"Entre a perfil.php";
 									<option>5</option>
 								</select>
 						   </div>
-						  <button id ="Busqueda" type="button" class="btn btn-primary btn-lg">Buscar</button>
+						  <button id ="Busqueda" value="refresh" type="button" class="btn btn-primary btn-lg">Buscar</button>
 					</form>
 				</div>
 
 			</div>
-      <div id="respuesta"></div>
+      <div data-role="main" class="ui-content" id="respuesta">
+
+      <!-- Aquí van los resultados de la consulta  -->
+      <table style="visibility:hidden;" data-role="table" data-mode="columntoggle" class='table table-hover ui-responsive table-responsive table-striped' id="tablaRespuesta">
+        <tr>
+          <th class="hidden-xs" style="visibility:hidden;">id</th>
+          <th>Foto</th>
+          <th>Zona</th>
+          <th>Habitaciones</th>
+          <th>Ba&ntildeo</th>
+          <th>Más Detalles</th>
+          <th>Contactar</th>
+        </tr>
+      </table>
+      <div id="nohayRes" style="visibility:hidden;">
+      <h1 class='text-center text-success'>Pruebe con otras opciones</h1>
+      <p class='text-center text-danger'>No se encontraron publicaciones con los valores seleccionados, pruebe con otras opciones</p>
+    </div>
+
+
+      </div>
       </div><!-- fin cuerpo -->
 	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <div class="pie">

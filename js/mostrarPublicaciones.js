@@ -48,7 +48,7 @@ document.body.onload = function() {novedades()};
 
             }
         }else{
-          var novedadesNo="No hay novedades";
+          var novedadesNo="<h1>No hay novedades</h1>";
           $("#tablaNovedades").append(novedadesNo);
 
         }

@@ -1,6 +1,6 @@
 <?php
 session_start();
-echo "entre a buscar.php";
+
 //Datos que recibe PHP desde el script
 //echo "----Entre al registro.php----";
 //$nombre=$_POST['nombre'];
@@ -20,54 +20,44 @@ $username2 = "alu4635";
 $password2 = "5sw5CK";
 $dbname = "alu4635";
 
-
 //Conectando a la base de datos
-$connection = mysql_connect($servername, $username2, $password2,$dbname) or die("Could not connect database :" . mysql_error());
+$connection = mysql_connect($servername, $username2, $password2,$dbname) or die(json_encode(array('type'=> 'error','text'=>"Could not connect database :" . mysql_error())));
 
 
 //Seleccionando la base de datos
-$db = mysql_select_db($dbname, $connection) or die("no se pudo seleccionar la base de datos : " . mysql_error());
+$db = mysql_select_db($dbname, $connection) or die(json_encode(array('type'=> 'error','text'=>"no se pudo seleccionar la base de datos : " . mysql_error())));
 
+//------------------------------------------------
 
 //query para comprobar si el email ya esta en la BBDD
-$into = mysql_query("SELECT * FROM PUBLICACION WHERE zona REGEXP '$zona' AND precio>='$precio_d' AND precio<='$precio_h' AND habitaciones REGEXP '$dormitorios' AND banho REGEXP '$banos'",$connection) or die('Consulta fallida : ' . mysql_error());
-$row= mysql_num_rows($into);
-if($row >= 1) {
+$into = mysql_query("SELECT * FROM PUBLICACION WHERE zona REGEXP '$zona' AND precio>='$precio_d' AND precio<='$precio_h' AND habitaciones REGEXP '$dormitorios' AND banho REGEXP '$banos'",$connection) or die(json_encode(array('type'=> 'error','text'=>"Error al hacer consulta" .mysql_error())));;
 
-echo "true";
-/* Desplegamos cada uno de los registros dentro de una tabla */
-echo "<table class='table table-striped' >";
+$row2=mysql_num_rows($into);
+$idid=$row2[id_pu];
+$queryFoto=mysql_query("SELECT * FROM FOTO WHERE fk_fo='$$idid'",$connection) or die(json_encode(array('type'=> 'error','text'=>"Error al hacer consulta" .mysql_error())));;
+$rowfoto=mysql_num_rows($queryFoto);
+$cantidad=mysql_num_rows($into);
+$jsondata= array();
 
-/*Priemro los encabezados*/
- echo "<tr>
-         <th colspan=5>RESULTADOS DE BUSQUEDA </th>
-       <tr>
-				 <th>Zona</th>
-				 <th>Precio</th>
-			   <th> Habitaciones </th>
-			   <th> Banos </th>
-				<th> Favoritos</th>
-      </tr>";
+  $i=0;
+  if($cantidad>=1)
+  {
+    $jsondata['type']='suss';
+    while($row=mysql_fetch_assoc($into))
+    {
+      $jsondata["busqueda"][$i]=$row;
+      $i++;
 
-/*Y ahora todos los registros */
-while($row=mysql_fetch_array($into))
-{
- echo "<tr>
-         <td> $row[zona]</td>
-         <td> $row[precio] </td>
-         <td> $row[habitaciones] </td>
-         <td> $row[banho] </td>
-         <td>
+    }
+    $output=json_encode($jsondata);
+          die($output);
 
-<button type='button' class='btn btn-default btn-lg'>
-  <span class='glyphicon glyphicon-star' aria-hidden='true'></span> Favorito
-</button></td>
-      </tr>";
-}
-echo "</table>";
-}else{
-echo "false";
-}
+  }else
+  {
+    $output = json_encode(array('type'=>'error', 'text' => 'No se ha obtenido resultado'));
+          	die($output);
+  }
+
 //echo "Correo electronico o contraseña invalidos";
 //echo '<script type="text/javascript"> 	$("#add_err").html("<p>Compruebe que el email y la contraseña esten correctos</p>");</script>
 //$error = "Email or Password Invalida";
