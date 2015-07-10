@@ -30,7 +30,7 @@ $db = mysql_select_db($dbname, $connection) or die(json_encode(array('type'=> 'e
 //------------------------------------------------
 
 //query para comprobar si el email ya esta en la BBDD
-$into = mysql_query("SELECT * FROM PUBLICACION WHERE zona REGEXP '$zona' AND precio>='$precio_d' AND precio<='$precio_h' AND habitaciones REGEXP '$dormitorios' AND banho REGEXP '$banos'",$connection) or die(json_encode(array('type'=> 'error','text'=>"Error al hacer consulta" .mysql_error())));;
+$into = mysql_query("SELECT * FROM PUBLICACION WHERE zona REGEXP '$zona' AND precio>='$precio_d' AND precio<='$precio_h' AND habitaciones REGEXP '$dormitorios' AND banho REGEXP '$banos'",$connection) or die(json_encode(array('type'=> 'error','text'=>"Error al hacer consulta" .mysql_error())));
 
 // $row2=mysql_num_rows($into);
 // $idid=$row2[id_pu];

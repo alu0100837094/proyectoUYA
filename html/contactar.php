@@ -1,5 +1,6 @@
 <?php
 include('../php/session.php');
+echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -11,7 +12,6 @@ include('../php/session.php');
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
 	<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
-  <script type="text/javascript" src="/alu4635/js/mostrarPublicaciones.js" ></script>
   </head>
   <body>
     <div class="container">
@@ -38,7 +38,7 @@ include('../php/session.php');
                       <!-- Collection of nav links and other content for toggling -->
                       <div id="navbarCollapse" class="collapse navbar-collapse">
                           <ul class="nav navbar-nav">
-                              <li class="active"><a href="/alu4635/html/home.php">Inicio</a></li>
+                              <li><a href="/alu4635/html/home.php">Inicio</a></li>
                               <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
                               <li><a href="/alu4635/html/perfil.php">Perfil</a></li>
                               <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
@@ -63,35 +63,12 @@ include('../php/session.php');
 
   			</div><!-- fin row -->
   		</div><!--fin cabecera-->
-  		<div data-role="page" class="cuerpo">
+  		<div class="cuerpo">
   			<div class="row" role="rowgroup">
-  				<div class="col-sm-12">
-  					<h1>Inicio</h1>
-            <div id="paraMensaje"></div>
-            <h2>Ultimas Publicaciones </h2>
-              <div class="ui-content" id="publicaciones">
+  				<div class="col-sm-6">
+  					<h1>Contactar</h1>
+            
 
-              <!-- Aquí van los resultados de la consulta  -->
-              <table class='table table-hover table-responsive table-striped' id="tablaNovedades">
-                <tr>
-                  <th class="hidden-xs" style="visibility:hidden;">id</th>
-                  <th>Foto</th>
-                  <th>Zona</th>
-                  <th>Habitaciones</th>
-                  <th>Ba&ntildeo</th>
-                  <th>Descripción</th>
-                  <th>Contactar</th>
-                </tr>
-              </table>
-              <div id="nohayRes" style="visibility:hidden;">
-              <h1 class='text-center text-success'>No hay publicaciones para mostrar</h1>
-              <p class='text-center text-danger'>No se encontraron publicaciones de usuarios en este momento</p>
-            </div>
-
-
-              </div>
-              <div id="verNovedad"></div>
-              <div id="verImagen"></div>
   				</div><!-- fin col-->
   			</div><!--fin row-->
   		</div><!-- fin cuerpo-->

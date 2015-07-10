@@ -1,60 +1,41 @@
 $(document).ready(function()
 {
-document.body.onload = function() {novedades()};
+document.body.onload = function() {recibidos()};
 // document.getElementsByTagName('body').onload = function() {novedades()};
-  function novedades()
+  function recibidos()
   {
     $.ajax(
     {
-      url: "/alu4635/php/novedades.php",
+      url: "/alu4635/php/mensajesRecibidos.php",
       type: "POST",
       dataType:'json',
 
       success: function(response)
       {
         var length = Object.keys(response.novedad).length;
-        // +-------+-------+-------------+--------------+--------+-------+--------------+
-        // | id_pu | fk_pu | descripcion | zona         | precio | banho | habitaciones |
-        // +-------+-------+-------------+--------------+--------+-------+--------------+
-        // |    81 |     4 |             | finca-espana |    400 |     3 |            3 |
-        // |    80 |     4 | asdasd      | la-laguna    |    400 |     3 |            3 |
-        // |    77 |     4 | sdfsdf      | la-laguna    |    300 |     4 |            3 |
-        // |    75 |     4 | kkkkkk      | la-cuesta    |    500 |     2 |            2 |
-        // +-------+-------+-------------+--------------+--------+-------+--------------+
-        // if(response.type=='suss')
-        //
-        //
-
-        //Aqui empieza a ponerse todo el json con un for
 
         if(response.type=='suss')
         {
             for(i=0; i<length;i++)
             {
-              var idCada="'"+response.novedad[i].id_pu+"'";
-              var foto="'"+response.novedad[i].foto+"'";
-              var numeroID=response.novedad[i].id_pu;
-              var zona=response.novedad[i].zona;
-              var habitaciones=response.novedad[i].habitaciones;
-              var banos=response.novedad[i].banho;
-              var precio=response.novedad[i].precio;
-              var desc=response.novedad[i].descripcion;
+
+              var email=response.mensaje[i].email;
+              var texto=response.mensaje[i].texto;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
               // var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
-              var botonCon="<button data-id="+idCada+"id='contactar' type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
               // var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
-              var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td><td>"+botonCon+"</td></tr>";
+              var textosRecibidos ="<tr><td>"+email+"</td><td>"+texto+"</td></tr>";
 
               // $("#tablaNovedades").append(novedadesN);
               $('#nohayRes').css("visibility","hidden");
-              $("#tablaNovedades").css("visibility","visible");
-              $("#tablaNovedades").append(novedadesN);
+              $("#tablaMensajes").css("visibility","visible");
+              $("#tablaMensajes").append(novedadesN);
 
             }
         }else{
           // var novedadesNo="<h1>No hay novedades</h1>";
           // $("#tablaNovedades").append(novedadesNo);
-          $('#tablaNovedades').css("visibility","hidden");
+          $('#tablaMensajes').css("visibility","hidden");
           $("td").remove();
           $('#nohayRes').css("visibility","visible");
 
