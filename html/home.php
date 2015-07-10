@@ -68,19 +68,24 @@ include('../php/session.php');
   				<div class="col-sm-12">
   					<h1>Inicio</h1>
             <h2>Ultimas Publicaciones </h2>
-              <div data-role="main" class="ui-content" id="publicaciones">
+              <div class="ui-content" id="publicaciones">
 
               <!-- Aquí van los resultados de la consulta  -->
-              <table data-role="table" data-mode="columntoggle" class='table table-hover ui-responsive table-responsive table-striped' id="tablaNovedades">
+              <table class='table table-hover table-responsive table-striped' id="tablaNovedades">
                 <tr>
                   <th class="hidden-xs" style="visibility:hidden;">id</th>
+                  <th>Foto</th>
                   <th>Zona</th>
                   <th>Habitaciones</th>
                   <th>Ba&ntildeo</th>
-                  <th>Más Detalles</th>
+                  <th>Descripción</th>
                   <th>Contactar</th>
                 </tr>
               </table>
+              <div id="nohayRes" style="visibility:hidden;">
+              <h1 class='text-center text-success'>No hay publicaciones para mostrar</h1>
+              <p class='text-center text-danger'>No se encontraron publicaciones de usuarios en este momento</p>
+            </div>
 
 
               </div>

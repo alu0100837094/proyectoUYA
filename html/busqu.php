@@ -120,15 +120,15 @@ echo"Entre a perfil.php";
 									<option>5</option>
 								</select>
 						   </div>
-						  <button id ="Busqueda" value="refresh" type="button" class="btn btn-primary btn-lg">Buscar</button>
+						  <button id ="Busqueda" type="button" class="btn btn-primary btn-lg">Buscar</button>
 					</form>
 				</div>
 
 			</div>
-      <div data-role="main" class="ui-content" id="respuesta">
+      <div id="respuesta">
 
       <!-- Aquí van los resultados de la consulta  -->
-      <table style="visibility:hidden;" data-role="table" data-mode="columntoggle" class='table table-hover ui-responsive table-responsive table-striped' id="tablaRespuesta">
+      <table style="visibility:hidden;"class='table table-hover table-responsive table-striped' id="tablaRespuesta">
         <tr>
           <th class="hidden-xs" style="visibility:hidden;">id</th>
           <th>Foto</th>

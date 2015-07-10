@@ -22,15 +22,16 @@ $(document).ready(function(){
            for(i=0; i<length;i++)
            {
              var idCada="'"+response.busqueda[i].id_pu+"'";
-             var foto=response.urlFoto;
+             var foto="'"+response.busqueda[i].foto+"'";
              var numeroID=response.busqueda[i].id_pu;
              var zona=response.busqueda[i].zona;
              var habitaciones=response.busqueda[i].habitaciones;
              var banos=response.busqueda[i].banho;
              var precio=response.busqueda[i].precio;
              var desc=response.busqueda[i].descripcion;
+             var botonCon="<button id="+idCada+" type='button' class='btn btn-default' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
              // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
-             var busqueda ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td>"+foto+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td></tr>";
+             var busqueda ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td><td>"+botonCon+"</td></tr>";
 
               $('#nohayRes').css("visibility","hidden");
               $("#tablaRespuesta").css("visibility","visible");

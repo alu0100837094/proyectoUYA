@@ -55,7 +55,7 @@ if(isset($_FILES['imagen'])) //check uploaded file
 	$file_error 	  = $_FILES['imagen']['error'];
 
 	//aqui se mueve el archivo a la carpeta destino
-	$target = "/alu4635/upload/";
+	$target = "../php/upload/";
 	$new_name_image=$random_digit.$file_name;
 	$path=$target.$new_name_image;
   // move_uploaded_file($_FILES["file"]["tmp_name"], $target. $_FILES["file"]["name"]);

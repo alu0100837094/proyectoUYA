@@ -32,6 +32,7 @@ document.body.onload = function() {novedades()};
             for(i=0; i<length;i++)
             {
               var idCada="'"+response.novedad[i].id_pu+"'";
+              var foto="'"+response.novedad[i].foto+"'";
               var numeroID=response.novedad[i].id_pu;
               var zona=response.novedad[i].zona;
               var habitaciones=response.novedad[i].habitaciones;
@@ -39,17 +40,23 @@ document.body.onload = function() {novedades()};
               var precio=response.novedad[i].precio;
               var desc=response.novedad[i].descripcion;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
-              var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
+              // var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
               var botonCon="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
-              var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' data-descripcion="+desc+" data-precio="+precio+">"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
+              // var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
+              var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td><td>"+botonCon+"</td></tr>";
 
-
+              // $("#tablaNovedades").append(novedadesN);
+              $('#nohayRes').css("visibility","hidden");
+              $("#tablaNovedades").css("visibility","visible");
               $("#tablaNovedades").append(novedadesN);
 
             }
         }else{
-          var novedadesNo="<h1>No hay novedades</h1>";
-          $("#tablaNovedades").append(novedadesNo);
+          // var novedadesNo="<h1>No hay novedades</h1>";
+          // $("#tablaNovedades").append(novedadesNo);
+          $('#tablaNovedades').css("visibility","hidden");
+          $("td").remove();
+          $('#nohayRes').css("visibility","visible");
 
         }
       },//cierro succes
