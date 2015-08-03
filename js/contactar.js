@@ -1,45 +1,31 @@
 $(document).ready(function()
 {
-    $("#contactar").click(function()
+    $('button').click(function()
     {
-        var idParaConsulta=("#contactar").attr('data-id');
+        var idParaConsulta=$(this).attr('data-id');
         //convertir a json
         var data="{ 'idParaConsulta': '"+idParaConsulta+"' }"
+        alert(idParaConsulta);
+        var formMensaje="<h2>Mensaje a contacto</h2><div class='form-group'><br><br><div class='col-sm-12'><form id='form_publicar' class='form-horizontal' enctype='multipart/form-data'><div id='Email_' class='form-group'><div class='col-sm-6'><label id='label_correo' for='inputEmail2' class='col-sm-0 control-label'>Correo electrónico</label><input id='emailM' name='email' type='email' aria-labelledby='Email_ label_correo' aria-required='true' aria-describedby='Email' class='form-control' id='inputEmail2' placeholder='Escriba su correo electrónico'></div></div><div class='col-sm-6'><label id='mensajePublicacion' class='control-label' for='descripcion'>Mensaje</label><textarea id='descripcion' name='descripcion' class='form-control' placeholder='Escriba toda la información necesaria para que el usuario se pueda contactar con usted'></textarea><br><button id='enviarM' type='button' class='btn btn-primary btn-lg'>Publicar</button></div></div></form></div>";
+        $("#paraMensaje").html(formMensaje);
         //Mirar como sacar el data-id del boton
-
-        if(idParaConsulta)
-        {
           $.ajax(
             {
               type:'POST',
-              url:'alu4635/php/contactar.php',
+              url:'../php/contactar.php',
               data:data,
               dataType:'json',
               succes:function(response)
               {
+                alert(response.type);
 
                 if (response.type=='suss')
                 {
-                  var formMensaje="<div class='form-group'>
-      							<br><br>
-                    <div class='col-sm-12'>
-                    <form id='form_publicar' class='form-horizontal' enctype='multipart/form-data'>
-                    <div id='Email_' class='form-group'>
-					              <label id='label_correo' for='inputEmail2' class='col-sm-0 control-label'></label>
-				              	<div class='col-sm-10'>
-					                  	<input id='emailM' name='email' type='email' aria-labelledby='Email_ label_correo' aria-required='true' aria-describedby='Email' class='form-control' id='inputEmail2' placeholder='Email'>
-					              </div>
-				            </div>
-                    <label id='mensajePublicacion' class='control-label' for='descripcion'>Mensaje</label>
-      							<textarea id='descripcion' name='descripcion' class='form-control' placeholder='Escriba toda la información para que el usuario se pueda contactar con usted'></textarea>
-      						</div>
-                  <button id='enviarM' type='button' class='btn btn-primary btn-lg'>Publicar</button>
-                  </form>
-                  </div>
-                  ";
-                  $("#paraMensaje").html(formMensaje);
+
                   var email=response.email;
                   $("#emailM").append(email);
+
+
 
 
 
@@ -66,13 +52,10 @@ $(document).ready(function()
                 alert('Uncaught Error.\n' + jqXHR.responseText);
               }
                alert("Error con ajax");
-               },
+               }
             });
-        }else
-        {
-          alert("No se ha podido extraer el ID con el attr ");
-        }
-    )};//cerrar click boton
+
+    });//cerrar click boton
 //================================================================================
     $("#enviarM").click(function()
     {

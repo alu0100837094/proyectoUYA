@@ -12,10 +12,11 @@ document.body.onload = function() {recibidos()};
 
       success: function(response)
       {
-        var length = Object.keys(response.novedad).length;
+        // var length = Object.keys(response.novedad).length;
 
         if(response.type=='suss')
         {
+        var length = Object.keys(response.mensaje).length;
             for(i=0; i<length;i++)
             {
 
@@ -33,6 +34,7 @@ document.body.onload = function() {recibidos()};
 
             }
         }else{
+        
           // var novedadesNo="<h1>No hay novedades</h1>";
           // $("#tablaNovedades").append(novedadesNo);
           $('#tablaMensajes').css("visibility","hidden");

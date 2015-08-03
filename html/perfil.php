@@ -11,6 +11,7 @@ echo"Entre a perfil.php";
     <link rel="stylesheet" href="/alu4635/bootstrap-3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/alu4635/js/mostrarMensajes.js" ></script>
 	<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -65,26 +66,34 @@ echo"Entre a perfil.php";
   		</div><!--fin cabecera-->
   		<div class="cuerpo">
   			<div class="row" role="rowgroup">
+          <div class="col-sm-12">
   				<div id="mostrarMensaje" class="col-sm-6">
   					<h1>Perfil</h1>
             <div class="ui-content" id="publicaciones">
+                <h2>Mis Mensajes</h2>
 
-            <!-- Aquí van los resultados de la consulta  -->
-            <table class='table table-hover table-responsive table-striped' id="tablaMensajes">
-              <tr>
-                <th>Email</th>
-                <th>Texto</th>
-              </tr>
-            </table>
-            <div id="nohayRes" style="visibility:hidden;">
-            <h1 class='text-center text-success'>No hay mensajes para mostrar</h1>
-            <p class='text-center text-danger'>No se encontraron mensajes de usuarios en este momento</p>
-          </div>
+              <!-- Aquí van los resultados de la consulta  -->
+              <table class='table table-hover table-responsive table-striped' id="tablaMensajes">
+                <tr>
+                  <th>Email</th>
+                  <th>Texto</th>
+                </tr>
+              </table>
+              <div id="nohayRes" style="visibility:hidden;">
+                <h1 class='text-center text-success'>No hay mensajes para mostrar</h1>
+                <p class='text-center text-danger'>No se encontraron mensajes de usuarios en este momento</p>
+              </div>
 
 
             </div>
 
-  				</div><!-- fin col-->
+  				</div><!-- fin col6-->
+          <div id="misPublis" class="col-sm-6">
+            <h2>Mis publicaciones</h2>
+
+
+          </div><!-- fin col6-->
+        </div><!-- fin col12-->
   			</div><!--fin row-->
   		</div><!-- fin cuerpo-->
   		<br><br><br><br><br><br><br><br><br><br><br><br>

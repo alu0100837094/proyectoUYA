@@ -41,7 +41,7 @@ document.body.onload = function() {novedades()};
               var desc=response.novedad[i].descripcion;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
               // var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
-              var botonCon="<button data-id="+idCada+"id='contactar' type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
+              var botonCon="<script type='text/javascript' src='/alu4635/js/contactar.js' ></script><button data-id="+idCada+"id='contactar' type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
               // var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
               var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td><td>"+botonCon+"</td></tr>";
 
@@ -97,12 +97,7 @@ document.body.onload = function() {novedades()};
     }
   });
 
-  $("button").click(function()
-  {
-    $('td').html(   'Descripción : ' + $(this).attr('data-descripcion') + '    |     Precio : ' +  $(this).attr('data-precio')   );
-    $('#show_img').html("<img src="+$(this).attr('data-imagen')+"></img>");
 
-  });
 
 
 
