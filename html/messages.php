@@ -13,6 +13,7 @@ echo"Entre a perfil.php";
 		<link rel="stylesheet" href="/alu4635/bootstrap-3.3.4/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/alu4635/js/mostrarMensajes.js" ></script>
 		<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -39,13 +40,14 @@ echo"Entre a perfil.php";
                     </div>
                     <!-- Collection of nav links and other content for toggling -->
                     <div id="navbarCollapse" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav">
-                            <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
-                            <li><a href="/alu4348/html/perfil.php">Perfil</a></li>
-                            <li class="active"><a href="#">Mensajes</a></li>
-                            <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
-                            <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
-                        </ul>
+                      <ul class="nav navbar-nav">
+                          <li><a href="/alu4635/html/home.php">Inicio</a></li>
+                          <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
+                          <li><a href="/alu4635/html/perfil.php">Perfil</a></li>
+                          <li class="active"><a href="/alu4635/html/messages.php">Mensajes</a></li>
+                          <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
+                          <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
+                      </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
                             <li><a href="/alu4635/php/logout.php">Cerra sesión</a></li>
@@ -58,14 +60,25 @@ echo"Entre a perfil.php";
 		</div><!--fin cabecera-->
 		<div class="cuerpo">
 			<div class="row" role="rowgroup">
-				<div class="col-sm-6">
+				<div class="col-sm-12">
 					<h1>Mensajes</h1>
-					<ul class="nav nav-pills nav-stacked">
-						<li><a href="#">Redactar</a></li>
-						<li><a href="#">Recibidos</a></li>
-						<li><a href="#">Borradores</a></li>
-						<li><a href="#">Enviados</a></li>
-					</ul>
+          <div class="ui-content" id="publicaciones">
+
+
+            <!-- Aquí van los resultados de la consulta  -->
+            <table class='table table-hover table-responsive table-striped' id="tablaMensajes">
+              <tr>
+                <th>Email</th>
+                <th>Texto</th>
+              </tr>
+            </table>
+            <div id="nohayRes" style="visibility:hidden;">
+              <h1 class='text-center text-success'>No hay mensajes para mostrar</h1>
+              <p class='text-center text-danger'>No se encontraron mensajes de usuarios en este momento</p>
+            </div>
+
+
+          </div>
 				</div><!-- fin col-->
 			</div><!--fin row-->
 		</div><!-- fin cuerpo-->

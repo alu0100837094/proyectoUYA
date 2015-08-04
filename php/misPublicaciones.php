@@ -19,7 +19,7 @@ $publicaciones=mysql_query($query,$connection) or die(json_encode(array('type'=>
 
 $cantidad=mysql_num_rows($publicaciones);
 $jsondata= array();
-  $i=0;
+$i=0;
   if($cantidad>=1)
   {
     $jsondata['type']='suss';

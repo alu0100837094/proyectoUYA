@@ -68,7 +68,7 @@ include('../php/session.php');
   				<div class="col-sm-12">
   					<h1>Inicio</h1>
             <div id="paraMensaje" >
-              
+
             </div>
             <h2>Ultimas Publicaciones </h2>
               <div class="ui-content" id="publicaciones">
@@ -78,6 +78,7 @@ include('../php/session.php');
                 <tr>
                   <th class="hidden-xs" style="visibility:hidden;">id</th>
                   <th>Foto</th>
+                  <th>Precio</th>
                   <th>Zona</th>
                   <th>Habitaciones</th>
                   <th>Ba&ntildeo</th>

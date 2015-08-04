@@ -11,7 +11,7 @@ echo"Entre a perfil.php";
     <link rel="stylesheet" href="/alu4635/bootstrap-3.3.4/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="/alu4635/bootstrap-3.3.4/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/alu4635/js/mostrarMensajes.js" ></script>
+    <script type="text/javascript" src="/alu4635/js/mostrarMispu.js" ></script>
 	<link media="screen" href="pag.css" type="text/css" rel="stylesheet">
   </head>
   <body>
@@ -42,6 +42,7 @@ echo"Entre a perfil.php";
                               <li><a href="/alu4635/html/home.php">Inicio</a></li>
                               <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
                               <li class="active"><a href="/alu4635/html/perfil.php">Perfil</a></li>
+                              <li><a href="/alu4635/html/messages.php">Mensajes</a></li>
                               <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
                               <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
                           </ul>
@@ -67,29 +68,25 @@ echo"Entre a perfil.php";
   		<div class="cuerpo">
   			<div class="row" role="rowgroup">
           <div class="col-sm-12">
-  				<div id="mostrarMensaje" class="col-sm-6">
-  					<h1>Perfil</h1>
-            <div class="ui-content" id="publicaciones">
-                <h2>Mis Mensajes</h2>
 
-              <!-- Aquí van los resultados de la consulta  -->
-              <table class='table table-hover table-responsive table-striped' id="tablaMensajes">
-                <tr>
-                  <th>Email</th>
-                  <th>Texto</th>
-                </tr>
-              </table>
-              <div id="nohayRes" style="visibility:hidden;">
-                <h1 class='text-center text-success'>No hay mensajes para mostrar</h1>
-                <p class='text-center text-danger'>No se encontraron mensajes de usuarios en este momento</p>
-              </div>
-
-
-            </div>
-
-  				</div><!-- fin col6-->
-          <div id="misPublis" class="col-sm-6">
+          <div id="misPublis" class="col-sm-12">
             <h2>Mis publicaciones</h2>
+
+            <table class='table table-hover table-responsive table-striped' id="tablaPublis">
+              <tr>
+                <th class="hidden-xs" style="visibility:hidden;">id</th>
+                <th>Foto</th>
+                <th>Precio</th>
+                <th>Zona</th>
+                <th>Habitaciones</th>
+                <th>Ba&ntildeo</th>
+                <th>Descripción</th>
+              </tr>
+            </table>
+            <div id="nohayPublis" style="visibility:hidden;">
+              <h1 class='text-center text-success'>No hay publicaciones para mostrar</h1>
+              <p class='text-center text-danger'>No se encontraron publicaciones realizadas en este momento</p>
+            </div>
 
 
           </div><!-- fin col6-->
