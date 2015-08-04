@@ -41,6 +41,7 @@ include('../php/session.php');
                               <li class="active"><a href="/alu4635/html/home.php">Inicio</a></li>
                               <li><a href="/alu4635/html/busqu.php">Buscar</a></li>
                               <li><a href="/alu4635/html/perfil.php">Perfil</a></li>
+                              <li><a href="/alu4635/html/messages.php">Mensajes</a></li>
                               <li><a href="/alu4635/html/publicar.php">Publicar</a></li>
                               <li><a href="/alu4635/html/favoritos.php">Favoritos</a></li>
                           </ul>

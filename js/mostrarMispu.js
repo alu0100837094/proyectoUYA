@@ -12,7 +12,7 @@ function misPubli()
     success: function(response)
     {
       // var length = Object.keys(response.novedad).length;
-      alert(response.text);
+      
       if(response.type=='suss')
       {
       var length = Object.keys(response.publicacion).length;
