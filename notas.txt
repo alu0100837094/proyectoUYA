@@ -1,0 +1,7 @@
+uno-de-piera.com/subir-imagenes-con-php-y-jquery
+
+www.jqueryeasy.com/2011/12/09/subir-imagenes-al-servidor-con-ajax-y-guardarlas-en-una-tabla-mysql/
+
+casamadrugada.net/tutoriales/php/como-subir-archivos-imagenes-utilizando-php-y-mysql/
+
+en youtube buscar manuel j dávila <<< cursos de php
