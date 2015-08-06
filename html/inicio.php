@@ -26,13 +26,14 @@ header("location: /html/perfil.php");
 						<div class="hide" id="img_cabecera">
 							Imagen de la cabecera
 						</div>
-            <div id="text_entrar"><h1> Acceder </h1></div>
+            <div id="text_entrar"><h1> CompartiendoPiso.com </h1></div>
+            <h2>Iniciar Sesión</h2>
 					<form id="logForm" class="form-inline" role="form" action="#" method="post"><br>
 						<div id="Correo" role="alertdialog" aria-describedby="Alert_email" class="form-group">
 							<div class="hide" id="Alert_email">
 								Email incorrecto
 							</div>
-							<label id="label_email" for="email" >Email address:</label>
+							<label id="label_email" for="email" >Correo Electrónico:</label>
 							<input type="email" class="form-control" id="email"  name="email" aria-labelledby="Correo label_email" aria-required="true" aria-autocomplete="true" aria-describedby="EmailUser" class="form-control" required>
 								<div class="hide" id="EmailUser">
 									Correo electronico del usuario
@@ -42,7 +43,7 @@ header("location: /html/perfil.php");
 							<div class="hide" id="Alert_email">
 								Contraseña incorrecta
 							</div>
-							<label id="label_contraseña" for="pwd">Password:</label>
+							<label id="label_contraseña" for="pwd">Contraseña:</label>
 							<input type="password" class="form-control" id="password"  name="password" aria-labelledby="Contraseña_ label_contraseña" aria-required="true" aria-describedby="Contraseña" class="form-control" required>
 								<div class="hide" id="Contraseña">
 									Contraseña del usuario
@@ -69,7 +70,7 @@ header("location: /html/perfil.php");
            <img aria-describedby="img_sofa" src= "http://www.myqualityhome.es/wp-content/uploads/2014/12/salazul.jpg" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
            					<div class="hide" id="img_sofa">
            						Imagen de un sofa para decorar la página
-           					</div>				
+           					</div>
         </div>
                <div class="col-sm-6">
                    <form id="regform" class="form-horizontal" role="form" action="#" method="post">
@@ -96,7 +97,7 @@ header("location: /html/perfil.php");
 			            	<div id="Email_" class="form-group">
 					              <label id="label_correo" for="inputEmail2" class="col-sm-0 control-label"></label>
 				              	<div class="col-sm-10">
-					                  	<input id="emailR" type="email" aria-labelledby="Email_ label_correo" aria-required="true" aria-describedby="Email" class="form-control" id="inputEmail2" placeholder="Email">
+					                  	<input id="emailR" type="email" aria-labelledby="Email_ label_correo" aria-required="true" aria-describedby="Email" class="form-control" id="inputEmail2" placeholder="Correo Electrónico">
 											<div class="hide" id="Email">
 												Email requerido para registrarse
 											</div>
@@ -106,7 +107,7 @@ header("location: /html/perfil.php");
 				            <div id="passwd" class="form-group">
 					              <label id="label_pwd" for="inputPassword3" class="col-sm-0 control-label"></label>
 					            	<div class="col-sm-10">
-						              	<input id="passwordR" type="password" aria-labelledby="passwd label_pwd" aria-required="true" aria-describedby="ContraseñaR" class="form-control" id="inputPassword3" placeholder="Password">
+						              	<input id="passwordR" type="password" aria-labelledby="passwd label_pwd" aria-required="true" aria-describedby="ContraseñaR" class="form-control" id="inputPassword3" placeholder="Contraseña">
 											<div class="hide" id="Contraseña">
 												Contraseña para registrarse
 											</div>
@@ -115,7 +116,7 @@ header("location: /html/perfil.php");
                   <div id="passwd2" class="form-group">
                       <label id="label_pwd2" for="inputPassword4" class="col-sm-0 control-label"></label>
                       <div class="col-sm-10">
-                          <input id="passwordR2" type="password" aria-labelledby="passwd2 label_pwd2" aria-required="true" aria-describedby="ComprobarContraseña" class="form-control" id="inputPassword4" placeholder="Comprobar Password">
+                          <input id="passwordR2" type="password" aria-labelledby="passwd2 label_pwd2" aria-required="true" aria-describedby="ComprobarContraseña" class="form-control" id="inputPassword4" placeholder="Comprobar Contraseña">
                     <div class="hide" id="ComprobarContraseña">
                       Comprobar Contraseña para registrarse
                     </div>
