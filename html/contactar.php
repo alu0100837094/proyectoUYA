@@ -32,7 +32,7 @@ include('../php/session.php');
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                           </button>
-                          <a href="/alu4635/html/home.php" class="navbar-brand">BuscandoPiso.com</a>
+                          <a href="/alu4635/html/home.php" class="navbar-brand">CompartiendoPiso.com</a>
                       </div>
                       <!-- Collection of nav links and other content for toggling -->
                       <div id="navbarCollapse" class="collapse navbar-collapse">

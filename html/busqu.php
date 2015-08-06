@@ -20,8 +20,11 @@ include('../php/session.php');
       <div class="Cabecera">
 		<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<img src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded img-responsive" alt="imagen_azul" width="1200" height="50"><br><br><br>
-				</div>
+          <img src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded img-responsive"  aria-describedby="img_cab" alt="imagen_azul_top" width="1200" height="50"><br><br><br>
+          <div class="hide" id="img_cab">
+					  Imagen de cabecera
+					</div>
+        </div>
 			</div>
           <div class="row" role="rowgroup">
 			<div class="col-sm-12">
@@ -35,7 +38,7 @@ include('../php/session.php');
                           <span class="icon-bar"></span>
                           <span class="icon-bar"></span>
                       </button>
-                      <a href="/alu4635/html/home.php" class="navbar-brand">BuscandoPiso.com</a>
+                      <a href="/alu4635/html/home.php" class="navbar-brand">CompartiendoPiso.com</a>
                   </div>
                   <!-- Collection of nav links and other content for toggling -->
                   <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -152,20 +155,31 @@ include('../php/session.php');
       </div><!-- fin cuerpo -->
 	  <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <div class="pie">
-        <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
-
+        <img  aria-describedby="img_pie" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul_pie" width="1200" height="10"><br><br><br>
+  		<div class="hide" id="img_pie">
+  			imagen del pie de la página
+  		</div>
         <div class="row" role="row">
           <div class="col-sm-4" >
             <!-- <button type="button" class="btn btn-link">Ayuda</button> -->
-            <a href="/alu4635/html/ayuda.html">Ayuda</a>
+             <a role = "link" aria-describedby="AYuda" href="/alu4635/html/ayuda.html">Ayuda</a>
+  		  <div class ="hide" id = "AYuda">
+  			Enlace para ver preguntas frecuentes que puedan ayudar.
+  		  </div>
           </div>
           <div class="col-sm-4" >
             <!-- <button type="button" class="btn btn-link">Acerca de</button> -->
-              <a href="/alu4635/html/contacto.html">Contacto</a>
+              <a role ="link" aria-describedby="COntacto" href="/alu4635/html/contacto.html">Contacto</a>
+  			<div class ="hide" id = "COntacto">
+  				Enlace para contactar con el administrador de la página.
+  		  </div>
           </div>
           <div class="col-sm-4" >
             <!-- <button type="button" class="btn btn-link">Politicas de privacidad</button> -->
-              <a href="/alu4635/html/avisoLegal.html">Politicas de Privacidad</a>
+               <a role="link" aria-describedby="PPrivacidad" href="/alu4635/html/avisoLegal.html">Politicas de Privacidad</a>
+  			<div class ="hide" id = "PPrivacidad">
+  					Enlace para consultar las Politicas de Privacidad de la empresa.
+  		     </div>
           </div>
         </div>
 	   </div><!--fin pie-->
