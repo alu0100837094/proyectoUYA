@@ -20,7 +20,7 @@ $(document).ready(function(){
     // datos= "zona="+zona+"&precio="+precio+"&dormitorios="+dormitorios+"&banos="+banos+"&descripcion="+descripcion+"&imagen="+data;
 
 		// alert(datos);
-     alert(post_datos);
+    //  alert(post_datos);
 
 		if( zona == '' || precio == '' || dormitorios == '' || banos == '' ){
 			$("#add_err").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' /><p class='text-danger'>*  Campos obligatorios</p>");
@@ -49,7 +49,7 @@ $(document).ready(function(){
 
       success: function(response){
 
-      alert("Entre al succes" +response);
+      // alert("Entre al succes" +response);
      //window.location="perfil.php";
      //load json data from server and output message
  				if(response.type == 'error' || response.type == 'prueba'){ //load json data from server and output message

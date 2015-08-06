@@ -1,6 +1,5 @@
 <?php
 include('../php/session.php');
-echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -46,7 +45,7 @@ echo"Entre a perfil.php";
                           </ul>
                           <ul class="nav navbar-nav navbar-right">
                               <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
-                              <li><a href="/alu4635/php/logout.php">Cerra sesión</a></li>
+                              <li><a href="/alu4635/php/logout.php">Cerra sesión <span class='glyphicon glyphicon-off' aria-hidden='true'></span></a></li>
                           </ul>
                       </div>
               </div>
@@ -67,7 +66,7 @@ echo"Entre a perfil.php";
   			<div class="row" role="rowgroup">
   				<div class="col-sm-6">
   					<h1>Contactar</h1>
-            
+
 
   				</div><!-- fin col-->
   			</div><!--fin row-->

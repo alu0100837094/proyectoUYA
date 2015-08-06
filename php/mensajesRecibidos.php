@@ -14,12 +14,12 @@ $connection = mysql_connect($servername, $username2, $password2,$dbname) or die(
 $db = mysql_select_db($dbname, $connection) or die(json_encode(array('type'=> 'error','text'=>"no se pudo seleccionar la base de datos : " . mysql_error())));
 
 //------------------------------------------------
-$query="SELECT * FROM MENSAJE WHERE email='$login_session'";
+$query="SELECT * FROM MENSAJE WHERE fk_me='$id_session'";
 $mensajes=mysql_query($query,$connection) or die(json_encode(array('type'=> 'error','text'=>"Error al hacer consulta" .mysql_error())));
 
 $cantidad=mysql_num_rows($mensajes);
 $jsondata= array();
-  $i=0;
+$i=0;
   if($cantidad>=1)
   {
     $jsondata['type']='suss';

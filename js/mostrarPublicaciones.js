@@ -12,7 +12,6 @@ document.body.onload = function() {novedades()};
 
       success: function(response)
       {
-        var length = Object.keys(response.novedad).length;
         // +-------+-------+-------------+--------------+--------+-------+--------------+
         // | id_pu | fk_pu | descripcion | zona         | precio | banho | habitaciones |
         // +-------+-------+-------------+--------------+--------+-------+--------------+
@@ -29,6 +28,7 @@ document.body.onload = function() {novedades()};
 
         if(response.type=='suss')
         {
+        var length = Object.keys(response.novedad).length;
             for(i=0; i<length;i++)
             {
               var idCada="'"+response.novedad[i].id_pu+"'";
@@ -41,7 +41,7 @@ document.body.onload = function() {novedades()};
               var desc=response.novedad[i].descripcion;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
               // var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
-              var botonCon="<button data-id="+idCada+"id='contactar' type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
+              var botonCon="<button data-id="+idCada+"id='contactar' type='button' class='btn btn-default btn-lg' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-envelope' aria-hidden='true'></span> Contactar</button>";
               // var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
               var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+precio+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td><td>"+botonCon+"</td></tr>";
 

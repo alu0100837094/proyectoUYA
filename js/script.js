@@ -17,9 +17,6 @@ $(document).ready(function(){
       data: "email="+email+"&password="+password,
       success: function(html){
 
-      alert("Entre al succes-->  "+html);
-     //window.location="perfil.php";
-      alert(html);
 
    if(html=='true')
    {
@@ -32,7 +29,22 @@ $(document).ready(function(){
     $("#add_err").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50' />Correo o contraseña incorrectos");
    }
      },
-     error:function(){
+     error:function(jqXHR,exception)
+     { if (jqXHR.status === 0) {
+         alert('Not connected.\nPlease verify your network connection.');
+     } else if (jqXHR.status == 404) {
+       alert('The requested page not found. [404]');
+     } else if (jqXHR.status == 500) {
+       alert('Internal Server Error [500].');
+     } else if (exception === 'parsererror') {
+       alert('Requested JSON parse failed.');
+     } else if (exception === 'timeout') {
+       alert('Time out error.');
+     } else if (exception === 'abort') {
+       alert('Ajax request aborted.');
+     } else {
+       alert('Uncaught Error.\n' + jqXHR.responseText);
+     }
       alert("Error con ajax");
       },
   //    beforeSend:function()
@@ -58,8 +70,8 @@ $(document).ready(function(){
    var formDatos= $("#regform").serialize();
    var datos={"nombre":nombre,"apellidos":apellidos,"emailR":emailR,"passwordR":passwordR};
    var data= "nombre="+nombre+"&apellidos="+apellidos+"&emailR="+emailR+"&passwordR="+passwordR+"&passwordR2="+passwordR2;
-   alert("lo que serializo " +data);
-   alert("Esta mandando esto : "+nombre+apellidos+emailR+passwordR2+passwordR);
+  //  alert("lo que serializo " +data);
+  //  alert("Esta mandando esto : "+nombre+apellidos+emailR+passwordR2+passwordR);
 
    if(emailR =='' || passwordR =='' || apellidos == '' || nombre == '' || passwordR2 == ''){
      $("#add_errR").html("<img src='/alu4635/images/alert.png' class='responsive' alt='imagen_cargando' width='50' height='50'/><p>Llene todos los campos</p>");
@@ -75,13 +87,13 @@ $(document).ready(function(){
      success: function(html){
 
 
-     alert("Entre al succes de registro"+html);
+    //  alert("Entre al succes de registro"+html);
     //window.location="perfil.php";
 
 
   if(html=='true')    {
 
-   window.location="alu4635/html/registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
+   window.location="../html/registroExitoso.html";//aquí que direccione a una página que diga Gracias por registrarse
   }
   else    {
   $("#add_errR").css('display', 'inline', 'important');

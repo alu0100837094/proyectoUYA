@@ -1,6 +1,5 @@
 <?php
 include('../php/session.php');
-echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
 
@@ -50,7 +49,7 @@ echo"Entre a perfil.php";
                       </ul>
                       <ul class="nav navbar-nav navbar-right">
                           <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
-                          <li><a href="/alu4635/php/logout.php">Cerra sesión</a></li>
+                          <li><a href="/alu4635/php/logout.php">Cerra sesión <span class='glyphicon glyphicon-off' aria-hidden='true'></span></a></li>
                       </ul>
                   </div>
           </div>
@@ -62,6 +61,8 @@ echo"Entre a perfil.php";
       <div class="cuerpo">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12 col-centered">
+          <h1>Buscar</h1>
+          <div id="paraMensaje"></div>
 					<form id="form_buscar"class="form-inline center-block">
 						<div class="form-group">
 							<label id="Zona"for="zona">Zona</label>
@@ -133,6 +134,7 @@ echo"Entre a perfil.php";
         <tr>
           <th class="hidden-xs" style="visibility:hidden;">id</th>
           <th>Foto</th>
+          <th>Precio</th>
           <th>Zona</th>
           <th>Habitaciones</th>
           <th>Ba&ntildeo</th>

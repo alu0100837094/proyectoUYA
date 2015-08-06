@@ -19,8 +19,7 @@ document.body.onload = function() {recibidos()};
         var length = Object.keys(response.mensaje).length;
             for(i=0; i<length;i++)
             {
-
-              var email=response.mensaje[i].email;
+              var email=response.mensaje[i].emailC;
               var texto=response.mensaje[i].texto;
               // var novedadesN="<div id='"+idCada+"'><p>Zona</p>"+zona+"</div>"
               // var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
@@ -30,11 +29,11 @@ document.body.onload = function() {recibidos()};
               // $("#tablaNovedades").append(novedadesN);
               $('#nohayRes').css("visibility","hidden");
               $("#tablaMensajes").css("visibility","visible");
-              $("#tablaMensajes").append(novedadesN);
+              $("#tablaMensajes").append(textosRecibidos);
 
             }
         }else{
-        
+        alert(response.text);
           // var novedadesNo="<h1>No hay novedades</h1>";
           // $("#tablaNovedades").append(novedadesNo);
           $('#tablaMensajes').css("visibility","hidden");

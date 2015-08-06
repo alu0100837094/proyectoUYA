@@ -18,7 +18,7 @@ $novedades=mysql_query($query) or die(json_encode(array('type'=> 'error','text'=
 
 $jsondata= array();
 $i=0;
-if($novedades)
+if($novedades>=1)
 {
   $jsondata['type']='suss';
   while($row=mysql_fetch_assoc($novedades))

@@ -1,6 +1,5 @@
 <?php
 include('../php/session.php');
-echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
 <html lang="es">

@@ -47,7 +47,7 @@ include('../php/session.php');
                           </ul>
                           <ul class="nav navbar-nav navbar-right">
                               <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
-                              <li><a href="/alu4635/php/logout.php">Cerra sesión</a></li>
+                              <li><a href="/alu4635/php/logout.php">Cerra sesión <span class='glyphicon glyphicon-off' aria-hidden='true'></span></a></li>
                           </ul>
                       </div>
               </div>

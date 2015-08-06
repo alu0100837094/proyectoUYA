@@ -12,7 +12,7 @@ function misPubli()
     success: function(response)
     {
       // var length = Object.keys(response.novedad).length;
-      
+
       if(response.type=='suss')
       {
       var length = Object.keys(response.publicacion).length;
@@ -31,7 +31,7 @@ function misPubli()
             // var botonVer="<button id="+idCada+" type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Ver</button>";
             var botonCon="<script type='text/javascript' src='/alu4635/js/contactar.js' ></script><button data-id="+idCada+"id='contactar' type='button' class='btn btn-default btn-xs' class='btn btn-default btn-lg'><span class='glyphicon glyphicon-star' aria-hidden='true'></span> Contactar</button>";
             // var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;'>"+numeroID+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+botonVer+"</td><td>"+botonCon+"</td></tr>";
-            var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+precio+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td><td>"+botonCon+"</td></tr>";
+            var novedadesN ="<tr><td class='hidden-xs' style='visibility:hidden;' >"+numeroID+"</td><td><img class='img-rounded img-responsive' alt='foto de la publicacion' width='200' height='200' src="+foto+"></td><td>"+precio+"</td><td>"+zona+"</td><td>"+habitaciones+"</td><td>"+banos+"</td><td>"+desc+"</td></tr>";
 
 
             // $("#tablaNovedades").append(novedadesN);

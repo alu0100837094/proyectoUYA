@@ -1,6 +1,5 @@
 <?php
 include('../php/session.php');
-echo"Entre a perfil.php";
 ?>
 <!DOCTYPE html>
 
@@ -36,7 +35,7 @@ echo"Entre a perfil.php";
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="#" class="navbar-brand">BuscandoPiso.com</a>
+                        <a href="/alu4635/html/home.php" class="navbar-brand">BuscandoPiso.com</a>
                     </div>
                     <!-- Collection of nav links and other content for toggling -->
                     <div id="navbarCollapse" class="collapse navbar-collapse">
@@ -50,7 +49,7 @@ echo"Entre a perfil.php";
                       </ul>
                         <ul class="nav navbar-nav navbar-right">
                             <li><a id="welcome">Bienvenido : <i><?php echo $login_session; ?></i></a></li>
-                            <li><a href="/alu4635/php/logout.php">Cerra sesión</a></li>
+                            <li><a href="/alu4635/php/logout.php">Cerra sesión <span class='glyphicon glyphicon-off' aria-hidden='true'></span></a></li>
                         </ul>
                     </div>
             </div>
@@ -61,7 +60,7 @@ echo"Entre a perfil.php";
 		<div class="cuerpo">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<h1>Mensajes</h1>
+					<h1>Bandeja de entrada</h1>
           <div class="ui-content" id="publicaciones">
 
 
@@ -89,15 +88,15 @@ echo"Entre a perfil.php";
       <div class="row" role="row">
         <div class="col-sm-4" >
           <!-- <button type="button" class="btn btn-link">Ayuda</button> -->
-          <a href="/alu4635/ayuda.html">Ayuda</a>
+          <a href="/alu4635/html/ayuda.html">Ayuda</a>
         </div>
         <div class="col-sm-4" >
           <!-- <button type="button" class="btn btn-link">Acerca de</button> -->
-            <a href="/alu4635/contacto.html">Contacto</a>
+            <a href="/alu4635/html/contacto.html">Contacto</a>
         </div>
         <div class="col-sm-4" >
           <!-- <button type="button" class="btn btn-link">Politicas de privacidad</button> -->
-            <a href="/alu4635/avisoLegal.html">Politicas de Privacidad</a>
+            <a href="/alu4635/html/avisoLegal.html">Politicas de Privacidad</a>
         </div>
       </div>
 		</div><!-- pie-->
