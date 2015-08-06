@@ -32,7 +32,7 @@ $password = mysql_real_escape_string($password);
 $db = mysql_select_db($dbname, $connection) or die("no se pudo seleccionar la base de datos : " . mysql_error());
 // SQL query to fetch information of registerd users and finds user match.
 
-$query = mysql_query("SELECT * FROM MyGuests WHERE password='$password' AND email='$email'", $connection) or die('Consulta fallida :' .mysql_error());
+$query = mysql_query("SELECT * FROM USUARIO WHERE password='$password' AND email='$email'", $connection) or die('Consulta fallida :' .mysql_error());
 
 
 //$consulta=
