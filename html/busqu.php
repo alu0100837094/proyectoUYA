@@ -1,5 +1,5 @@
 <?php
-include('../php/session.php');
+// include('../php/session.php');
 ?>
 <!DOCTYPE html>
 
@@ -68,7 +68,7 @@ include('../php/session.php');
           <div id="paraMensaje"></div>
 					<form id="form_buscar"class="form-inline center-block">
 						<div class="form-group">
-							<label id="Zona"for="zona">Zona</label>
+							<label id="Zona"for="zona_buscar">Zona</label>
 								<select name="zona_buscar" class="form-control">
 									<option value=".*" role="option">Todos</option>
                   <option value=''>Seleccione la zona</option>
@@ -84,7 +84,7 @@ include('../php/session.php');
 								</select>
 						   </div>
 						   <div class="form-group">
-								<label id="Precio" for="dormi">Precio</label>
+								<label id="Precio" for="precio_buscar_d">Precio</label>
 									<select name="precio_buscar_d" class="form-control">
 										<option value="" role="option">Desde €</option>
 										<option>200</option>
@@ -104,7 +104,7 @@ include('../php/session.php');
 									</select>
 						   </div>
 						   <div class="form-group">
-								<label id ="Dormitorios" for="dormi">Dormitorios</label>
+								<label id ="Dormitorios" for="dormitorios">Dormitorios</label>
 									<select name="dormitorios"  class="form-control">
 										<option value=".*" role="option">Todos</option>
 										<option>1</option>
