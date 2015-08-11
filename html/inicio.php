@@ -67,7 +67,7 @@ header("location: /html/perfil.php");
       <div class="Cuerpo">
            <div class="row" role="rowgroup">
 			   <div class="col-sm-6">
-           <img aria-describedby="img_sofa" src= "http://www.myqualityhome.es/wp-content/uploads/2014/12/salazul.jpg" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
+           <img aria-describedby="img_sofa" src= "http://usabilidadalu4348.host22.com/salazul.jpg" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
            					<div class="hide" id="img_sofa">
            						Imagen de un sofa para decorar la página
            					</div>
