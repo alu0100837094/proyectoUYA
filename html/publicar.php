@@ -64,12 +64,11 @@ include('../php/session.php');
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
 					<form role="form" aria-describedby="form_publicar" id="form_publicar" class="form-horizontal" enctype="multipart/form-data">
-<<<<<<< HEAD
+
 						<div class="hide" id="form_publicar" >
 							Formulario para introducir los datos de un inmueble y publicarlo en la página.
 						<div>
-=======
->>>>>>> wayarya
+
 						<div class="form-group">
 							<br><br>
 							<label id="imagen_publicar" for="imagen">Adjuntar un archivo</label><br><br>
@@ -79,33 +78,25 @@ include('../php/session.php');
 						</div><!--fin adjuntar archivo-->
 						<div id="form_zona" class="form-group">
 							<label id="zona_publicar" class="control-label" for="zona">Zona</label>
-<<<<<<< HEAD
-								<select aria-required="true"id="zona" name="zona" class="form-control">
-									<option value=''>Seleccione la zona</option>
-=======
+
 								<select id="zona" name="zona" class="form-control" aria-required="true">
                   <option value=''>Seleccione la zona</option>
->>>>>>> wayarya
-									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
-									<option value="La Laguna">La Laguna</option>
-									<option value="La Cuesta">La Cuesta</option>
-									<option value="Las Chumberas">Las Chumberas</option>
 									<option value="Finca España">Finca España</option>
 									<option value="Geneto">Geneto</option>
 									<option value="Gracia">Gracia</option>
 									<option value="Guajara">Guajara</option>
+									<option value="La Cuesta">La Cuesta</option>
+									<option value="Las Chumberas">Las Chumberas</option>
+									<option value="La Laguna">La Laguna</option>
+									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
 									<option value="Taco">Taco</option>
 								</select>
 						</div><!--fin zona-->
 						<div id="form_precio" class="form-group">
 							<label id="precio_publicar" class="control-label" for="precio">Precio €</label>
-<<<<<<< HEAD
-								<select id="precio" aria-required="true" name="precio" class="form-control">
-									<option value=''>Seleccione el precio</option>
-=======
+
 								<select id="precio" name="precio" class="form-control" aria-required="true">
                   <option value=''>Seleccione el precio</option>
->>>>>>> wayarya
 									<option>200</option>
 									<option>300</option>
 									<option>400</option>
@@ -115,13 +106,9 @@ include('../php/session.php');
 						</div><!--fin precio-->
 						<div id="form_dormitorio" class="form-group">
 							<label id="dormitorio_publicar" class="control-label" for="dormitorios">Dormitorios</label>
-<<<<<<< HEAD
-								<select id="dormitorios" name="dormitorios" class="form-control">
-									<option value=''>Seleccione el número de dormitorios</option>
-=======
+
 								<select id="dormitorios" name="dormitorios" class="form-control" aria-required="true">
                   <option value=''>Seleccione el número de dormitorios</option>
->>>>>>> wayarya
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>
@@ -131,13 +118,9 @@ include('../php/session.php');
 						 </div><!--fin dormitorios-->
 						 <div id="form_bano" class="form-group">
 							<label id="banos_publicar" class="control-label" for="banos">Baños</label>
-<<<<<<< HEAD
-								<select id="banos" name="banos" class="form-control">
-									<option value=''>Seleccione el número de baños</option>
-=======
+
 								<select id="banos" name="banos" class="form-control" aria-required="true">
                   <option value=''>Seleccione el número de baños</option>
->>>>>>> wayarya
 									<option>1</option>
 									<option>2</option>
 									<option>3</option>

@@ -70,17 +70,16 @@ include('../php/session.php');
 						<div class="form-group">
 							<label id="Zona"for="zona_buscar">Zona</label>
 								<select name="zona_buscar" class="form-control">
-									<option value=".*" role="option">Todos</option>
-                  <option value=''>Seleccione la zona</option>
-									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
-									<option value="La Laguna">La Laguna</option>
-									<option value="La Cuesta">La Cuesta</option>
-									<option value="Las Chumberas">Las Chumberas</option>
-									<option value="Finca España">Finca España</option>
-									<option value="Geneto">Geneto</option>
-									<option value="Gracia">Gracia</option>
-									<option value="Guajara">Guajara</option>
-									<option value="Taco">Taco</option>
+                    <option value=''>Seleccione la zona</option>
+  									<option value="Finca España">Finca España</option>
+  									<option value="Geneto">Geneto</option>
+  									<option value="Gracia">Gracia</option>
+  									<option value="Guajara">Guajara</option>
+  									<option value="La Cuesta">La Cuesta</option>
+  									<option value="Las Chumberas">Las Chumberas</option>
+  									<option value="La Laguna">La Laguna</option>
+  									<option value="Santa Cruz de Tenerife">Santa Cruz de Tenerife</option>
+  									<option value="Taco">Taco</option>  							
 								</select>
 						   </div>
 						   <div class="form-group">
