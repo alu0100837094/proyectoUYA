@@ -10,6 +10,7 @@ $(document).ready(function()
         $("#paraMensaje").html(formMensaje);
         $('#id_publicacion').val(idParaConsulta);
         $("#paraMensaje").append(elBoton);
+        document.getElementById("emailM").focus();
 
 
     });//cerrar click boton
