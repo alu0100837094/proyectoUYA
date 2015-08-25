@@ -67,12 +67,12 @@ include('../php/session.php');
 
 						<div class="hide" id="form_publicar" >
 							Formulario para introducir los datos de un inmueble y publicarlo en la página.
-						<div>
+						</div>
 
 						<div class="form-group">
 							<br><br>
 							<label id="imagen_publicar" for="imagen">Adjuntar un archivo</label><br><br>
-							<input class="btn" type="file" id="imagen" name="imagen"><br>
+							<input class="btn btn-primary btn-lg" type="file" id="imagen" name="imagen"><br>
 							<label id="descripcion_publicar" class="control-label" for="descripcion">Descripción</label>
 							<textarea id="descripcion" name="descripcion" class="form-control" placeholder="Añada breve descripción de lo que desea publicar" rows="3"></textarea>
 						</div><!--fin adjuntar archivo-->
