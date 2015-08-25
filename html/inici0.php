@@ -32,7 +32,7 @@ header("location: /html/perfil.php");
       <div class="Cabecera">
           <div class="row" role="rowgroup">
 				<div class="col-sm-12">
-          <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded img-responsive" alt="imagen_azul_top" width="1200" height="50"><br><br><br>
+          <img  aria-describedby="img_cabecera" src="http://banot.etsii.ull.es/alu4635/images/imagen_azul.png" class="img-rounded img-responsive" alt="imagen_azul_top" width="1200" height="50"><br><br><br>
 						<div class="hide" id="img_cabecera">
 							Imagen de la cabecera
 						</div>
@@ -71,7 +71,7 @@ header("location: /html/perfil.php");
 					</form>
 				</div>
 			</div>
-      <img  aria-describedby="img_medio" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul_medio" width="1200" height="30"><br><br><br>
+      <img  aria-describedby="img_medio" src="http://banot.etsii.ull.es/alu4635/images/imagen_azul.png" class="img-responsive img-rounded" alt="imagen_azul_medio" width="1200" height="30"><br><br><br>
 		<div class="hide" id="img_medio">
 			Imagen que separa la zona para loguearse de la de registrarse
 		</div>
@@ -144,7 +144,7 @@ header("location: /html/perfil.php");
 			    </form>
       </div>
       <div class="col-sm-6">
-        <img aria-describedby="img_sofa" src= "http://usabilidadalu4348.host22.com/salazul.jpg" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
+        <img aria-describedby="img_sofa" src= "http://banot.etsii.ull.es/alu4635/images/imagen_sofa.png" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
                  <div class="hide" id="img_sofa">
                    Imagen de un sofa para decorar la página
                  </div>
@@ -157,7 +157,7 @@ header("location: /html/perfil.php");
 
   <div class="pie">
     <br><br>
-    <img  aria-describedby="img_pie" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul_pie" width="1200" height="10"><br><br><br>
+    <img  aria-describedby="img_pie" src="http://banot.etsii.ull.es/alu4635/images/imagen_azul.png" class="img-responsive img-rounded" alt="imagen_azul_pie" width="1200" height="10"><br><br><br>
 	  <div class="hide" id="img_pie">
 		Imagen para final de la pagina
 	  </div>

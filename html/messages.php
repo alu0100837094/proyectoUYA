@@ -20,7 +20,7 @@ include('../php/session.php');
 		<div class="cabecera">
 			<div class="row" role="rowgroup">
 				<div class="col-sm-12">
-					<img src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="50"><br><br><br>
+					<img src="http://banot.etsii.ull.es/alu4635/images/imagen_azul.png" class="img-rounded" alt="imagen_azul" width="1200" height="50"><br><br><br>
 				</div>
 			</div>
 			<div class="row" role="rowgroup">
@@ -83,7 +83,7 @@ include('../php/session.php');
 		</div><!-- fin cuerpo-->
 		<br><br><br><br><br><br><br><br><br><br><br><br>
 		<div class="pie">
-      <img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
+      <img  aria-describedby="img_cabecera" src="http://banot.etsii.ull.es/alu4635/images/imagen_azul.png" class="img-responsive img-rounded" alt="imagen_azul" width="1200" height="10"><br><br><br>
 
       <div class="row" role="row">
         <div class="col-sm-4" >

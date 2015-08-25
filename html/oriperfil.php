@@ -17,7 +17,7 @@ include('../php/session.php');
       <div class="Cabecera">
         <div class="row" role="rowgroup">
           <div class="col-sm-12">
-  					<img  aria-describedby="img_cabecera" src="http://usabilidadalu4348.host22.com/bootstrap/cabecera.jpg" class="img-rounded" alt="imagen_azul" width="1200" height="100"><br><br><br>
+  					<img  aria-describedby="img_cabecera" src="http://banot.etsii.ull.es/alu4635/images/imagen_azul.png" class="img-rounded" alt="imagen_azul" width="1200" height="100"><br><br><br>
   						<div class="hide" id="img_cabecera">
   							Imagen de la cabecera
   						</div>
