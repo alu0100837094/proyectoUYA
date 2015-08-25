@@ -7,21 +7,7 @@ header("location: /html/perfil.php");
 ?>
 <!DOCTYPE html>
 <html lang="es">
-  <head><!-- Google Analytics Content Experiment code -->
-<script>function utmx_section(){}function utmx(){}(function(){var
-k='106994086-0',d=document,l=d.location,c=d.cookie;
-if(l.search.indexOf('utm_expid='+k)>0)return;
-function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
-indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
-length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
-'<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
-'://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
-'&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
-valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
-'" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
-</script><script>utmx('url','A/B');</script>
-<!-- End of Google Analytics Content Experiment code -->
-
+  <head>
     <title>Buscando piso, tu mejor opción</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,7 +36,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 						<div class="hide" id="img_cabecera">
 							Imagen de la cabecera
 						</div>
-            <div id="text_entrar"><h1> CompartiendoPiso.com </h1></div>
+            <div id="text_entrar"><h1>BIENVENIDO a CompartiendoPiso.com, su mejor opción! </h1></div>
             <h2>Iniciar Sesión</h2>
 					<form id="logForm" class="form-inline" role="form" action="#" method="post"><br>
 						<div id="Correo" role="alertdialog" aria-describedby="Alert_email" class="form-group">
@@ -92,15 +78,11 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		</div>
       <div class="Cuerpo">
            <div class="row" role="rowgroup">
-			   <div class="col-sm-6">
-           <img aria-describedby="img_sofa" src= "http://usabilidadalu4348.host22.com/salazul.jpg" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
-           					<div class="hide" id="img_sofa">
-           						Imagen de un sofa para decorar la página
-           					</div>
-        </div>
+
                <div class="col-sm-6">
                    <form id="regform" class="form-horizontal" role="form" action="#" method="post">
-                     <div id="text_registro"><h2> Registrarse </h2></div><br>
+                     <div id="text_registro"><h2> ¿No esta registrado? <br>  Es GRATIS ¿Qué Espera?
+                       <br>Registrarse </h2></div><br>
 			              	<div id="Nombre_" class="form-group">
 				                	<label id="label_nombre" for="inputNombre" class="col-sm-0 control-label"></label>
 					               <div class="col-sm-10">
@@ -161,6 +143,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				        </div>
 			    </form>
       </div>
+      <div class="col-sm-6">
+        <img aria-describedby="img_sofa" src= "http://usabilidadalu4348.host22.com/salazul.jpg" class="img-rounded img-responsive" alt="imagen_sofa_azul" width="500" height="500">
+                 <div class="hide" id="img_sofa">
+                   Imagen de un sofa para decorar la página
+                 </div>
+     </div>
 
 	 </div> <!-- fin col -->
   </div><!-- fin row -->
